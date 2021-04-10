@@ -5,6 +5,7 @@ const (
 	git    = ""
 	graph  = ""
 	man    = ""
+	node   = ""
 	pager  = ""
 	pencil = "פֿ"
 	ruby   = ""
@@ -24,6 +25,7 @@ func GetMap() map[string]string {
 		"man":     man,
 		"more":    pager,
 		"nano":    pencil,
+		"node":    node,
 		"nvim":    vim,
 		"pico":    pencil,
 		"ruby":    ruby,
