@@ -29,6 +29,7 @@ func GetMap() map[string]string {
 		"bat":     animal,
 		"cat":     animal,
 		"clx":     clx,
+		"curl":    globe,
 		"fd":      search,
 		"find":    search,
 		"fish":    shell,
