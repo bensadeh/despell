@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+const iconNotFound = ""
+
 func main() {
 	arg := arguments.GetArguments()
 	mappings := defaults.GetMap()
@@ -14,8 +16,9 @@ func main() {
 	result := mappings[arg]
 
 	if result == "" {
+		fmt.Print(iconNotFound)
 		os.Exit(0)
 	}
 
-	fmt.Println(mappings[arg])
+	fmt.Print(mappings[arg])
 }
