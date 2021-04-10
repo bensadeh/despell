@@ -4,21 +4,11 @@ import (
 	"despell/arguments"
 	"despell/defaults"
 	"fmt"
-	"os"
 )
-
-const iconNotFound = "ﲵ"
 
 func main() {
 	arg := arguments.GetArguments()
-	mappings := defaults.GetMap()
+	icon := defaults.GetIcon(arg)
 
-	result := mappings[arg]
-
-	if result == "" {
-		fmt.Print(iconNotFound)
-		os.Exit(0)
-	}
-
-	fmt.Print(mappings[arg])
+	fmt.Print(icon)
 }

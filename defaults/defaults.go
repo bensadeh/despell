@@ -1,6 +1,8 @@
 package defaults
 
 const (
+	defaultIcon = "ﲵ"
+
 	animal = ""
 	clx    = ""
 	git    = ""
@@ -20,7 +22,7 @@ const (
 	vim    = ""
 )
 
-func GetMap() map[string]string {
+func getIcons() map[string]string {
 	return map[string]string{
 		"Python":  python,
 		"[tmux]":  tmux,
@@ -56,4 +58,15 @@ func GetMap() map[string]string {
 		"vim":     vim,
 		"zsh":     shell,
 	}
+}
+
+func GetIcon(key string) string {
+	icons := getIcons()
+	icon := icons[key]
+
+	if icon == "" {
+		return defaultIcon
+	}
+
+	return icon
 }
