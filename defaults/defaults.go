@@ -3,7 +3,7 @@ package defaults
 const (
 	animal = ""
 	clx    = ""
-	git    = ""
+	git    = ""
 	globe  = ""
 	graph  = ""
 	man    = ""
