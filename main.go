@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const iconNotFound = ""
+const iconNotFound = "ﲵ"
 
 func main() {
 	arg := arguments.GetArguments()
