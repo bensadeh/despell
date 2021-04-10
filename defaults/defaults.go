@@ -9,6 +9,7 @@ const (
 	pencil = "פֿ"
 	ruby   = ""
 	shell  = ""
+	sudo   = ""
 	vim    = ""
 )
 
@@ -26,6 +27,7 @@ func GetMap() map[string]string {
 		"nvim":    vim,
 		"pico":    pencil,
 		"ruby":    ruby,
+		"sudo":    sudo,
 		"tig":     git,
 		"top":     graph,
 		"vi":      vim,
