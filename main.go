@@ -2,13 +2,13 @@ package main
 
 import (
 	"despell/arguments"
-	"despell/defaults"
+	"despell/nerdfonts"
 	"fmt"
 )
 
 func main() {
 	arg := arguments.GetArguments()
-	icon := defaults.GetIcon(arg)
+	icon := nerdfonts.GetIcon(arg)
 
 	fmt.Print(icon)
 }

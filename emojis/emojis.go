@@ -1,25 +1,24 @@
-package defaults
+package emojis
 
 const (
 	defaultIcon = "ﲵ"
 
-	animal = ""
-	clx    = ""
-	git    = ""
-	globe  = ""
-	graph  = ""
-	man    = ""
+	animal = "🐾"
+	clx    = "📰"
+	git    = "🌿"
+	globe  = "🌎"
+	graph  = "📊"
+	man    = "📕"
 	node   = ""
-	pager  = ""
-	pencil = "פֿ"
-	python = ""
-	ruby   = ""
-	search = ""
-	shell  = ""
-	ssh    = ""
-	sudo   = ""
-	tmux   = "﬿"
-	vim    = ""
+	pager  = "📑"
+	pencil = "✏️"
+	python = "🐍"
+	ruby   = "♦️"
+	search = "🔍"
+	shell  = "🐚"
+	ssh    = "🛰"
+	sudo   = "❗️"
+	tmux   = "🔳"
 )
 
 func getIcons() map[string]string {
@@ -45,7 +44,6 @@ func getIcons() map[string]string {
 		"more":    pager,
 		"nano":    pencil,
 		"node":    node,
-		"nvim":    vim,
 		"pico":    pencil,
 		"ping":    globe,
 		"rg":      search,
@@ -54,8 +52,6 @@ func getIcons() map[string]string {
 		"sudo":    sudo,
 		"tig":     git,
 		"top":     graph,
-		"vi":      vim,
-		"vim":     vim,
 		"zsh":     shell,
 	}
 }
