@@ -8,6 +8,7 @@ const (
 	git       = ""
 	globe     = ""
 	graph     = ""
+	hourglass = ""
 	man       = ""
 	node      = ""
 	pager     = ""
@@ -52,6 +53,7 @@ func getIcons() map[string]string {
 		"ruby":    ruby,
 		"scp":     computers,
 		"ssh":     computers,
+		"sleep":   hourglass,
 		"sudo":    sudo,
 		"tail":    animal,
 		"tig":     git,
