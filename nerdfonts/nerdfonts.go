@@ -1,7 +1,7 @@
 package nerdfonts
 
 const (
-	defaultIcon = "ﲵ"
+	defaultIcon = ""
 
 	animal = ""
 	clx    = ""
