@@ -5,11 +5,15 @@ const (
 
 	animal    = ""
 	clx       = ""
+	computers = ""
+	copy      = ""
+	delete    = "﫧"
 	git       = ""
 	globe     = ""
 	graph     = ""
 	hourglass = ""
 	man       = ""
+	move      = ""
 	node      = ""
 	pager     = ""
 	pencil    = "פֿ"
@@ -17,7 +21,6 @@ const (
 	ruby      = ""
 	search    = ""
 	shell     = ""
-	computers = ""
 	sudo      = ""
 	tmux      = "﬿"
 	vim       = ""
@@ -32,6 +35,7 @@ func getIcons() map[string]string {
 		"bat":     animal,
 		"cat":     animal,
 		"clx":     clx,
+		"cp":      copy,
 		"curl":    globe,
 		"fd":      search,
 		"find":    search,
@@ -44,16 +48,18 @@ func getIcons() map[string]string {
 		"less":    pager,
 		"man":     man,
 		"more":    pager,
+		"mv":      move,
 		"nano":    pencil,
 		"node":    node,
 		"nvim":    vim,
 		"pico":    pencil,
 		"ping":    globe,
 		"rg":      search,
+		"rm":      delete,
 		"ruby":    ruby,
 		"scp":     computers,
-		"ssh":     computers,
 		"sleep":   hourglass,
+		"ssh":     computers,
 		"sudo":    sudo,
 		"tail":    animal,
 		"tig":     git,
