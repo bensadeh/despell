@@ -52,6 +52,7 @@ func getIcons() map[string]string {
 		"ruby":    ruby,
 		"ssh":     ssh,
 		"sudo":    sudo,
+		"tail":    animal,
 		"tig":     git,
 		"top":     graph,
 		"vi":      vim,
