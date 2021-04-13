@@ -3,23 +3,23 @@ package nerdfonts
 const (
 	defaultIcon = ""
 
-	animal = ""
-	clx    = ""
-	git    = ""
-	globe  = ""
-	graph  = ""
-	man    = ""
-	node   = ""
-	pager  = ""
-	pencil = "פֿ"
-	python = ""
-	ruby   = ""
-	search = ""
-	shell  = ""
-	ssh    = ""
-	sudo   = ""
-	tmux   = "﬿"
-	vim    = ""
+	animal    = ""
+	clx       = ""
+	git       = ""
+	globe     = ""
+	graph     = ""
+	man       = ""
+	node      = ""
+	pager     = ""
+	pencil    = "פֿ"
+	python    = ""
+	ruby      = ""
+	search    = ""
+	shell     = ""
+	computers = ""
+	sudo      = ""
+	tmux      = "﬿"
+	vim       = ""
 )
 
 func getIcons() map[string]string {
@@ -50,13 +50,15 @@ func getIcons() map[string]string {
 		"ping":    globe,
 		"rg":      search,
 		"ruby":    ruby,
-		"ssh":     ssh,
+		"scp":     computers,
+		"ssh":     computers,
 		"sudo":    sudo,
 		"tail":    animal,
 		"tig":     git,
 		"top":     graph,
 		"vi":      vim,
 		"vim":     vim,
+		"wget":    globe,
 		"zsh":     shell,
 	}
 }
