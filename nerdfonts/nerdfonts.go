@@ -48,6 +48,7 @@ func getIcons() map[string]string {
 		"gh":         github,
 		"grep":       search,
 		"htop":       graph,
+		"http":       globe,
 		"lazygit":    git,
 		"less":       pager,
 		"lf":         directory,
