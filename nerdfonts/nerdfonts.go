@@ -6,10 +6,11 @@ const (
 	animal    = ""
 	clx       = ""
 	computers = ""
-	copy      = ""
-	delete    = "﫧"
-	directory = ""
+	duplicate = ""
+	remove    = "﫧"
+	directory = "פּ"
 	git       = ""
+	github    = ""
 	globe     = ""
 	graph     = ""
 	hourglass = ""
@@ -37,13 +38,14 @@ func getIcons() map[string]string {
 		"bat":        animal,
 		"cat":        animal,
 		"clx":        clx,
-		"cp":         copy,
+		"duplicate":  duplicate,
 		"curl":       globe,
 		"fd":         search,
 		"find":       search,
 		"fish":       shell,
 		"fzf":        search,
 		"git":        git,
+		"gh":         github,
 		"grep":       search,
 		"htop":       graph,
 		"lazygit":    git,
@@ -60,7 +62,7 @@ func getIcons() map[string]string {
 		"ping":       globe,
 		"ranger":     directory,
 		"rg":         search,
-		"rm":         delete,
+		"rm":         remove,
 		"ruby":       ruby,
 		"scp":        computers,
 		"sleep":      hourglass,
