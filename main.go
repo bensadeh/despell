@@ -10,5 +10,5 @@ func main() {
 	arg := arguments.GetArguments()
 	icon := nerdfonts.GetIcon(arg)
 
-	fmt.Print(icon)
+	fmt.Println(icon)
 }
