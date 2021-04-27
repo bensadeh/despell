@@ -40,16 +40,12 @@ despell zsh
 
 ## How does it work?
 
-### Design
-
-
-
 At its core, `magica` acts like a [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. It takes a 
 process name as input and returns a [nerdfont](https://www.nerdfonts.com) icon as output. 
 
 If no matches are found, a "default response" icon is returned.
 
-### Customizing the tmux status line
+## Customizing the tmux status line
 
 To enable icons in `tmux`'s statusline, you must redefine the `window-status-current-format` (active window) and 
 `window-status-format` (inactive window) segments in `.tmux.conf`.
