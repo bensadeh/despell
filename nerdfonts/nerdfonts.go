@@ -3,30 +3,31 @@ package nerdfonts
 const (
 	defaultIcon = ""
 
-	animal    = ""
-	clx       = ""
-	computers = ""
-	duplicate = ""
-	remove    = "﫧"
-	directory = "פּ"
-	git       = ""
-	github    = ""
-	globe     = ""
-	graph     = ""
-	hourglass = ""
-	man       = ""
-	move      = ""
-	node      = ""
-	pager     = ""
-	pencil    = "פֿ"
-	python    = ""
-	ruby      = ""
-	search    = ""
-	shell     = ""
-	sudo      = ""
-	tmux      = "﬿"
-	vim       = ""
-	youtube   = ""
+	animal      = ""
+	book        = ""
+	computers   = ""
+	directories = "פּ"
+	down        = ""
+	duplicate   = ""
+	git         = ""
+	github      = ""
+	globe       = ""
+	graph       = ""
+	hourglass   = ""
+	move        = ""
+	node        = ""
+	pencil      = "פֿ"
+	python      = ""
+	ruby        = ""
+	search      = ""
+	shell       = ""
+	text        = ""
+	tmux        = "﬿"
+	trash       = "﫧"
+	vim         = ""
+	warning     = ""
+	yc          = ""
+	youtube     = ""
 )
 
 func getIcons() map[string]string {
@@ -37,39 +38,39 @@ func getIcons() map[string]string {
 		"bash":       shell,
 		"bat":        animal,
 		"cat":        animal,
-		"clx":        clx,
-		"duplicate":  duplicate,
+		"clx":        yc,
 		"curl":       globe,
+		"duplicate":  duplicate,
 		"fd":         search,
 		"find":       search,
 		"fish":       shell,
 		"fzf":        search,
-		"git":        git,
 		"gh":         github,
+		"git":        git,
 		"grep":       search,
 		"htop":       graph,
 		"http":       globe,
 		"lazygit":    git,
-		"less":       pager,
-		"lf":         directory,
-		"man":        man,
-		"more":       pager,
+		"less":       text,
+		"lf":         directories,
+		"man":        book,
+		"more":       text,
 		"mv":         move,
 		"nano":       pencil,
-		"nnn":        directory,
+		"nnn":        directories,
 		"node":       node,
 		"nvim":       vim,
 		"pico":       pencil,
 		"ping":       globe,
-		"ranger":     directory,
+		"ranger":     directories,
 		"rg":         search,
-		"rm":         remove,
+		"rm":         trash,
 		"ruby":       ruby,
 		"scp":        computers,
 		"sleep":      hourglass,
 		"ssh":        computers,
-		"sudo":       sudo,
-		"tail":       animal,
+		"sudo":       warning,
+		"tail":       down,
 		"tig":        git,
 		"top":        graph,
 		"vi":         vim,
