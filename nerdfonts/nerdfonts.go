@@ -10,6 +10,7 @@ const (
 	down        = ""
 	duplicate   = ""
 	git         = ""
+	golang      = ""
 	github      = ""
 	globe       = ""
 	graph       = ""
@@ -46,6 +47,7 @@ func getIcons() map[string]string {
 		"fish":       shell,
 		"fzf":        search,
 		"gh":         github,
+		"go":         golang,
 		"git":        git,
 		"grep":       search,
 		"htop":       graph,
