@@ -36,6 +36,7 @@ func getIcons() map[string]string {
 		"Python":     python,
 		"[tmux]":     tmux,
 		"ack":        search,
+		"atop":       graph,
 		"bash":       shell,
 		"bat":        animal,
 		"cat":        animal,
