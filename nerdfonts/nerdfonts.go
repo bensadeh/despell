@@ -10,9 +10,9 @@ const (
 	down        = ""
 	duplicate   = ""
 	git         = ""
-	golang      = ""
 	github      = ""
 	globe       = ""
+	golang      = ""
 	graph       = ""
 	hourglass   = ""
 	move        = ""
@@ -48,14 +48,15 @@ func getIcons() map[string]string {
 		"fish":       shell,
 		"fzf":        search,
 		"gh":         github,
-		"go":         golang,
 		"git":        git,
+		"go":         golang,
 		"grep":       search,
 		"htop":       graph,
 		"http":       globe,
 		"lazygit":    git,
 		"less":       text,
 		"lf":         directories,
+		"lynx":       globe,
 		"man":        book,
 		"more":       text,
 		"mv":         move,
@@ -78,6 +79,7 @@ func getIcons() map[string]string {
 		"top":        graph,
 		"vi":         vim,
 		"vim":        vim,
+		"w3m":        globe,
 		"wget":       globe,
 		"youtube-dl": youtube,
 		"zsh":        shell,
