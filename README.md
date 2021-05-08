@@ -4,7 +4,7 @@
 
 #
 
-`magica` is a tool for showing icons in your `tmux` statusline. 
+`magica` is a tool for showing icons in `tmux`'s statusline. 
 
 <p align="center">
   <img src="assets/example2.png" width="700" />
@@ -38,10 +38,14 @@ go install
 despell zsh
 ```
 
+### Dependencies
+
+`magica` relies [Nerd Fonts](https://www.nerdfonts.com) for providing the icons.
+
 ## How does it work?
 
-At its core, `magica` acts like a [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. It takes a 
-process name as input and returns a [nerdfont](https://www.nerdfonts.com) icon as output. 
+At its core, `magica` is just a [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. It takes a 
+process name as input and returns an icon as output. 
 
 If no matches are found, a "default response" icon is returned.
 
@@ -59,3 +63,24 @@ to:
 ```
 #(despell #W)
 ```
+## Overriding and adding icons
+
+Override default icons or add new mappings by creating an `overrides.json` and placing it in
+`~/.config/magica/overrides.json`. You can either use [this example file](/example) or the snippet 
+below as a starting off point:
+
+```json
+{
+  "unknownCommand": "?",
+  "ssh": "◇",
+  "zsh": "❤"
+}
+```
+
+
+## On the choice of which commands to include
+
+`magica` aims to include the **most commonly used commands** out of the box. Please let me know if 
+you think there is a command that should be included in the default mappings.
+
+For commands that are less common, please use the override JSON on your local system. 
