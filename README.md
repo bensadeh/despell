@@ -4,6 +4,14 @@
 
 #
 
+<div align="center">
+
+[![Latest release](https://img.shields.io/github/v/release/bensadeh/magica?style=flat&label=stable&color=e1acff&labelColor=292D3E)](https://github.com/bensadeh/circumflex/releases)
+[![Changelog](https://img.shields.io/badge/docs-changelog-9cc4ff?style=flat&labelColor=292D3E)](https://github.com/bensadeh/magica/blob/master/CHANGELOG.md)
+[![License](https://img.shields.io/github/license/bensadeh/magica?style=flat&color=c3e88d&labelColor=292D3E)](https://github.com/bensadeh/magica/blob/master/LICENSE)
+[![Go Version](https://img.shields.io/github/go-mod/go-version/bensadeh/circumflex?style=flat&color=ffe585&labelColor=292D3E)](https://github.com/bensadeh/circumflex/blob/master/go.mod)
+</div>
+
 `magica` is a tool for showing icons in `tmux`'s statusline. 
 
 <p align="center">
