@@ -1,0 +1,31 @@
+before:
+  hooks:
+    - go mod download
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+archives:
+  - replacements:
+      darwin: macOS
+      linux: Linux
+      386: 32-bit
+      amd64: 64-bit
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  skip: true
+brews:
+  - name: magica
+    tap:
+      owner: bensadeh
+      name: homebrew-magica
+    description: "magica is a tool for showing icons in tmux's statusline"
+    homepage: "https://github.com/bensadeh/magica/"
+    license: "MIT"
+    install: |
+      bin.install "magica" => "despell"
