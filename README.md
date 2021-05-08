@@ -12,11 +12,7 @@
 
 #
 
-<p align="center">
-  
- `magica` is a tool for showing icons in `tmux`'s statusline. 
-</p>
-
+`magica` is a tool for showing icons in `tmux`'s statusline. 
 
 
 <p align="center">
