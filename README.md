@@ -49,7 +49,7 @@ despell zsh
 
 ### Dependencies
 
-`magica` relies [Nerd Fonts](https://www.nerdfonts.com) for providing the icons.
+`magica` relies on [Nerd Fonts](https://www.nerdfonts.com) for providing the icons.
 
 ## How does it work?
 
@@ -75,7 +75,7 @@ to:
 ## Overriding and adding icons
 
 Override default icons or add new mappings by creating an `overrides.json` and placing it in
-`~/.config/magica/overrides.json`. You can either use [this example file](/example) or the snippet 
+`~/.config/magica/overrides.json`. You can either use [this example file](/examples) or the snippet 
 below as a starting off point:
 
 ```json
