@@ -59,6 +59,7 @@ process name as input and returns an icon as output.
 If no matches are found, a "default response" icon is returned.
 
 ## Customizing the tmux status line
+### How to configure
 
 To enable icons in `tmux`'s statusline, you must redefine the `window-status-current-format` (active window) and 
 `window-status-format` (inactive window) segments in `.tmux.conf`.
@@ -72,6 +73,21 @@ to:
 ```
 #(despell #W)
 ```
+
+### Examples
+
+#### Rounded
+
+<p align="center">
+  <img src="assets/rounded.png" width="700" />
+</p>
+
+#### Minimal
+
+<p align="center">
+  <img src="assets/minimal.png" width="700" />
+</p>
+
 ## Overriding and adding icons
 
 Override default icons or add new mappings by creating an `overrides.json` and placing it in
