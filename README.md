@@ -76,6 +76,11 @@ your current color scheme if you're not using the `palenight` theme.
   <img src="assets/minimal.png" width="700" />
 </p>
 
+#### [Colors](/examples/colors.conf)
+
+<p align="center">
+  <img src="assets/colors.png" width="700" />
+</p>
 
 #### [Rounded](/examples/rounded.conf)
 
@@ -92,9 +97,9 @@ below as a starting off point:
 
 ```json
 {
-  "unknownCommand": "?",
-  "ssh": "◇",
-  "zsh": "❤"
+  "ssh": {"Text": "◇", "Color": "red"},
+  "zsh": {"Text": "❤", "Color": "blue"},
+  "unknownCommand": {"Text": "?", "Color": "green"}
 }
 ```
 
