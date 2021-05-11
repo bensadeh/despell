@@ -105,10 +105,10 @@ below as a starting off point:
 
 ## On the choice of which commands to include
 
-`magica` aims to include the **most commonly used commands** out of the box. Please let me know if 
+`magica` aims to include the most commonly used commands out of the box. Please let me know if 
 you think there is a command that should be included in the default mappings.
 
-For commands that are less common, please use the override `JSON` on your local system. 
+For commands that are less common, please use `overrides.json` locally. 
 
 ## Under the hood
 
