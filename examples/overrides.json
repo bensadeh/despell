@@ -1,5 +1,5 @@
 {
-  "unknownCommand": "?",
-  "ssh": "◇",
-  "zsh": "❤"
+  "unknownCommand": {"Text": "?", "Color": "green"},
+  "ssh": {"Text": "◇", "Color": "red"},
+  "zsh": {"Text": "❤", "Color": "blue"}
 }

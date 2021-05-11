@@ -3,6 +3,7 @@ package main
 import (
 	"despell/arguments"
 	"despell/constants"
+	"despell/core"
 	"despell/overrider"
 	"despell/stock"
 	"fmt"
@@ -15,31 +16,27 @@ func main() {
 
 	icon := getIcon(arg, overrides, defaults)
 
-	fmt.Println(icon)
+	fmt.Println("#[fg=" + icon.Color + "]" + icon.Text)
 }
 
-func getIcon(key string, overrides, defaults map[string]string) string {
-	overridesIcon := overrides[key]
-	defaultsIcon := defaults[key]
+func getIcon(key string, overrides, defaults map[string]core.Icon) core.Icon {
 	unknownCommandIcon := getUnknownCommandIcon(overrides)
 
-	if overridesIcon != "" {
+	if overridesIcon, ok := overrides[key]; ok {
 		return overridesIcon
 	}
 
-	if defaultsIcon != "" {
+	if defaultsIcon, ok := defaults[key]; ok {
 		return defaultsIcon
 	}
 
 	return unknownCommandIcon
 }
 
-func getUnknownCommandIcon(overrides map[string]string) string {
-	unknownCommandOverride := overrides[constants.UnknownCommandKey]
-
-	if unknownCommandOverride == "" {
-		return constants.UnknownCommandIcon
+func getUnknownCommandIcon(overrides map[string]core.Icon) core.Icon {
+	if unknownCommandOverride, ok := overrides[constants.UnknownCommandKey]; ok {
+		return unknownCommandOverride
 	}
 
-	return unknownCommandOverride
+	return core.Icon{Text: constants.UnknownCommandIcon, Color: ""}
 }
