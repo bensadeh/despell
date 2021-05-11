@@ -10,13 +10,22 @@ import (
 )
 
 func main() {
-	arg := arguments.GetArguments()
+	command, isColors := arguments.Parse()
 	overrides := overrider.GetOverrides()
 	defaults := stock.GetDefaults()
 
-	icon := getIcon(arg, overrides, defaults)
+	icon := getIcon(command, overrides, defaults)
+	output := format(isColors, icon)
 
-	fmt.Println("#[fg=" + icon.Color + "]" + icon.Text)
+	fmt.Println(output)
+}
+
+func format(isColors bool, icon core.Icon) string {
+	if isColors {
+		return "#[fg=" + icon.Color + "]" + icon.Text
+	}
+
+	return icon.Text
 }
 
 func getIcon(key string, overrides, defaults map[string]core.Icon) core.Icon {
