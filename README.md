@@ -56,7 +56,7 @@ despell zsh
 At its core, `magica` is just a [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. It takes a 
 process name as input and returns an icon as output. 
 
-If no matches are found, a "default response" icon is returned.
+If no matches are found, a default `unknownCommand` icon is returned.
 
 ## Enabling magica
 ### How to configure
@@ -103,13 +103,12 @@ below as a starting off point:
 }
 ```
 
-
 ## On the choice of which commands to include
 
 `magica` aims to include the **most commonly used commands** out of the box. Please let me know if 
 you think there is a command that should be included in the default mappings.
 
-For commands that are less common, please use the override JSON on your local system. 
+For commands that are less common, please use the override `JSON` on your local system. 
 
 ## Under the hood
 
