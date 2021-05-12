@@ -29,8 +29,6 @@ func format(isColors bool, icon core.Icon) string {
 }
 
 func getIcon(key string, overrides, defaults map[string]core.Icon) core.Icon {
-	unknownCommandIcon := getUnknownCommandIcon(overrides)
-
 	if overridesIcon, ok := overrides[key]; ok {
 		return overridesIcon
 	}
@@ -39,7 +37,7 @@ func getIcon(key string, overrides, defaults map[string]core.Icon) core.Icon {
 		return defaultsIcon
 	}
 
-	return unknownCommandIcon
+	return getUnknownCommandIcon(overrides)
 }
 
 func getUnknownCommandIcon(overrides map[string]core.Icon) core.Icon {
