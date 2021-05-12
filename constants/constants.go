@@ -1,6 +1,11 @@
 package constants
 
+import "despell/core"
+
 const (
-	UnknownCommandIcon = ""
-	UnknownCommandKey  = "unknownCommand"
+	UnknownCommandKey = "unknownCommand"
 )
+
+func GetUnknownCommandIcon() core.Icon {
+	return core.Icon{Icon: "", Color: "gray"}
+}

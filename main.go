@@ -22,10 +22,10 @@ func main() {
 
 func format(isColors bool, icon core.Icon) string {
 	if isColors {
-		return "#[fg=" + icon.Color + "]" + icon.Text
+		return "#[fg=" + icon.Color + "]" + icon.Icon
 	}
 
-	return icon.Text
+	return icon.Icon
 }
 
 func getIcon(key string, overrides, defaults map[string]core.Icon) core.Icon {
@@ -47,5 +47,5 @@ func getUnknownCommandIcon(overrides map[string]core.Icon) core.Icon {
 		return unknownCommandOverride
 	}
 
-	return core.Icon{Text: constants.UnknownCommandIcon, Color: ""}
+	return constants.GetUnknownCommandIcon()
 }

@@ -1,11 +1,6 @@
 package core
 
-type Parent struct {
-	Text  string
-	Color string
-}
-
 type Icon struct {
-	Text  string `json:"Text"`
+	Icon  string `json:"Icon"`
 	Color string `json:"Color"`
 }
