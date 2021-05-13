@@ -3,6 +3,9 @@
 ## 0.3
 _WIP_
 
+- Changed field 'Text' to 'Icon'
+- Added more mappings
+
 ## 0.2
 _2021-05-11_
 
