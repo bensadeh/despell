@@ -53,13 +53,13 @@ despell zsh
 
 ## How does it work?
 
-At its core, `magica` is just a [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. It takes a 
-process name as input and returns an icon as output. 
+At its core, `magica` is a little more than a fancy [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. 
+It takes a process name as input and returns an icon as output. 
 
 If no matches are found, a default `unknownCommand` icon is returned.
 
 ## Enabling magica
-### How to configure
+### How to use
 
 `magica` was created to add a corresponding Nerd Font icon next to the currently running command as reported by `tmux`
 in the status line. To enable the icons, you must redefine the `window-status-current-format` (active window) and 
@@ -68,6 +68,27 @@ in the status line. To enable the icons, you must redefine the `window-status-cu
 Inside these segments, call `#(despell #W)` to call `magica` and map the command name to an icon. Have a look at the layouts 
 below for an example of the configuration used in the screenshot. Note that the colors may need to be adjusted to 
 your current color scheme if you're not using the `palenight` theme.
+
+### Settings
+#### Update frequency
+
+To configure how often tmux refreshes its status line, add the following command to 
+your `~/.tmux.conf`:
+
+
+```tmux
+# Set how often to update the status line in seconds
+tmux set -g status-interval 5
+```
+
+#### Per-icon colors
+
+To let `magica` set the icon color and override your theme settings, run `despell` with the 
+`-c` flag:
+
+```tmux
+#(despell -c #W)
+```
 
 ### Examples
 
