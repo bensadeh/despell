@@ -118,9 +118,9 @@ below as a starting off point:
 
 ```json
 {
-  "ssh": {"Text": "◇", "Color": "red"},
-  "zsh": {"Text": "❤", "Color": "blue"},
-  "unknownCommand": {"Text": "?", "Color": "green"}
+  "ssh": {"Icon": "◇", "Color": "red"},
+  "zsh": {"Icon": "❤", "Color": "blue"},
+  "unknownCommand": {"Icon": "?", "Color": "green"}
 }
 ```
 
