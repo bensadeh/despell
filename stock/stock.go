@@ -15,6 +15,7 @@ const (
 	golang      = ""
 	graph       = ""
 	hourglass   = ""
+	lua         = ""
 	move        = ""
 	node        = ""
 	pencil      = "פֿ"
@@ -56,6 +57,7 @@ func GetDefaults() map[string]core.Icon {
 		"lazygit":    {Icon: git, Color: "red"},
 		"less":       {Icon: text, Color: "magenta"},
 		"lf":         {Icon: directories, Color: "yellow"},
+		"lua":        {Icon: lua, Color: "blue"},
 		"lynx":       {Icon: globe, Color: "blue"},
 		"man":        {Icon: book, Color: "magenta"},
 		"more":       {Icon: text, Color: "magenta"},
