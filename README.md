@@ -12,7 +12,7 @@
 
 #
 
-`magica` is a tool for showing icons in `tmux`'s statusline. 
+`magica` is a tool for showing icons in `tmux`'s status line. 
 
 
 <p align="center">
@@ -56,7 +56,7 @@ despell zsh
 At its core, `magica` is a little more than a fancy [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. 
 It takes a process name as input and returns an icon as output. 
 
-If no matches are found, a default `unknownCommand` icon is returned.
+If no matches are found, an `unknownCommand` icon is returned.
 
 ## Enabling magica
 ### How to use
@@ -69,12 +69,14 @@ Inside these segments, call `#(despell #W)` to call `magica` and map the command
 below for an example of the configuration used in the screenshot. Note that the colors may need to be adjusted to 
 your current color scheme if you're not using the `palenight` theme.
 
+Since `magica` simply returns an icon for a given string, it can be easily extended to give icons to **session names** 
+(`#(despell #{session_name})`) or even **hostnames** (`#(despell #H)`).
+
 ### Settings
 #### Update frequency
 
 To configure how often tmux refreshes its status line, add the following command to 
 your `~/.tmux.conf`:
-
 
 ```tmux
 # Set how often to update the status line in seconds
@@ -124,7 +126,7 @@ below as a starting off point:
 }
 ```
 
-## On the choice of which commands to include
+## Default mappings
 
 `magica` aims to include the most commonly used commands out of the box. Please let me know if 
 you think there is a command that should be included in the default mappings.
