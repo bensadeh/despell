@@ -1,7 +1,7 @@
 # Changelog
 
 ## 0.3
-_WIP_
+_2021-05-17_
 
 - Changed field 'Text' to 'Icon'
 - Added more mappings
