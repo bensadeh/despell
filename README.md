@@ -75,7 +75,7 @@ Since `magica` simply returns an icon for a given string, it can be easily exten
 ### Settings
 #### Update frequency
 
-To configure how often tmux refreshes its status line, add the following command to 
+To configure how often `tmux` refreshes its status line, add the following command to 
 your `~/.tmux.conf`:
 
 ```tmux
