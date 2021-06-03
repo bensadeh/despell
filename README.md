@@ -6,7 +6,6 @@
 <a href="https://github.com/bensadeh/magica/releases" target="__blank"><img src="https://img.shields.io/github/v/release/bensadeh/magica?style=flat&label=&color=7a5ccc"</a>
 <a href="/CHANGELOG.md" target="__blank"><img src="https://img.shields.io/badge/docs-changelog-30365F?style=flat&label=" alt="Changelog"></a>
 <a href="/LICENSE" target="__blank"><img src="https://img.shields.io/github/license/bensadeh/magica?style=flat&color=e39400&label=" alt="License"></a>
-<a href="/go.mod" target="__blank"><img src="https://img.shields.io/static/v1?label=&message=Go+1.16&color=f2ce00" alt="Go Version"></a>
 </p>
 
 
