@@ -23,6 +23,7 @@ const (
 	ruby        = ""
 	search      = ""
 	shell       = ""
+	sync        = ""
 	text        = ""
 	tmux        = "﬿"
 	trash       = "﫧"
@@ -72,6 +73,7 @@ func GetDefaults() map[string]core.Icon {
 		"rg":         {Icon: search, Color: "cyan"},
 		"rm":         {Icon: trash, Color: "red"},
 		"ruby":       {Icon: ruby, Color: "red"},
+		"rsync":      {Icon: sync, Color: "red"},
 		"scp":        {Icon: computers, Color: "cyan"},
 		"sleep":      {Icon: hourglass, Color: "cyan"},
 		"ssh":        {Icon: computers, Color: "cyan"},
