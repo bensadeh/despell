@@ -11,7 +11,10 @@
 
 #
 
-`magica` is a tool for showing icons in `tmux`'s status line. 
+<p align="center">
+  <code>magica</code> is a tool for showing icons in <code>tmux</code>'s status line
+</p>
+
 
 
 <p align="center">
@@ -48,14 +51,12 @@ despell zsh
 
 ### Dependencies
 
-`magica` relies on [Nerd Fonts](https://www.nerdfonts.com) for providing the icons.
+`magica` requires your terminal to use a [Nerd Fonts](https://www.nerdfonts.com)-patched font.
 
 ## How does it work?
 
-At its core, `magica` is a little more than a fancy [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. 
-It takes a process name as input and returns an icon as output. 
-
-If no matches are found, an `unknownCommand` icon is returned.
+At its core, `magica` is a [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. 
+It takes a string (process name) as input and returns a string (icon) as output. 
 
 ## Enabling magica
 ### How to use
@@ -64,12 +65,11 @@ If no matches are found, an `unknownCommand` icon is returned.
 in the status line. To enable the icons, you must redefine the `window-status-current-format` (active window) and 
 `window-status-format` (inactive window) segments in `~/.tmux.conf`.
 
-Inside these segments, call `#(despell #W)` to call `magica` and map the command name to an icon. Have a look at the layouts 
+Inside these segments, call `#(despell #W)` to let `tmux` map the command name to their respective icons. Have a look at the layouts 
 below for an example of the configuration used in the screenshot. Note that the colors may need to be adjusted to 
 your current color scheme if you're not using the `palenight` theme.
 
-Since `magica` simply returns an icon for a given string, it can be easily extended to give icons to **session names** 
-(`#(despell #{session_name})`) or even **hostnames** (`#(despell #H)`).
+`magica` can be extended to give icons to **session names** (`#(despell #{session_name})`) and **hostnames** (`#(despell #H)`).
 
 ### Settings
 #### Update frequency
