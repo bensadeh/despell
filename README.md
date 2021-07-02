@@ -55,21 +55,22 @@ despell zsh
 
 ## How does it work?
 
-At its core, `magica` is a [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. 
+At its core, `magica` is a just a glorified [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. 
 It takes a string (process name) as input and returns a string (icon) as output. 
 
 ## Enabling magica
 ### How to use
 
 `magica` was created to add a corresponding Nerd Font icon next to the currently running command as reported by `tmux`
-in the status line. To enable the icons, you must redefine the `window-status-current-format` (active window) and 
-`window-status-format` (inactive window) segments in `~/.tmux.conf`.
+in the status line. To use `magica`, you must edit the following segments in your `~/.tmux.conf`:
+- `window-status-current-format` (active window)
+- `window-status-format` (inactive window)
 
-Inside these segments, call `#(despell #W)` to let `tmux` map the command name to their respective icons. Have a look at the layouts 
+Inside these segments, call `#(despell #W)` to map the command name to their respective icons. Have a look at the layouts 
 below for an example of the configuration used in the screenshot. Note that the colors may need to be adjusted to 
 your current color scheme if you're not using the `palenight` theme.
 
-`magica` can be extended to give icons to **session names** (`#(despell #{session_name})`) and **hostnames** (`#(despell #H)`).
+`magica` is not limited to providing icons only for process names. It can be extended to give icons for **session names** (`#(despell #{session_name})`) and **hostnames** (`#(despell #H)`).
 
 ### Settings
 #### Update frequency
