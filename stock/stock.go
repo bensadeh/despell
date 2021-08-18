@@ -9,18 +9,20 @@ const (
 	directories = "פּ"
 	down        = ""
 	duplicate   = ""
-	git         = ""
+	git         = ""
 	github      = ""
 	globe       = ""
 	golang      = ""
 	graph       = ""
 	hourglass   = ""
+	java        = ""
+	javascript  = ""
 	lua         = ""
+	markdown    = ""
 	move        = ""
-	node        = ""
 	pencil      = "פֿ"
 	python      = ""
-	ruby        = ""
+	ruby        = ""
 	search      = ""
 	shell       = ""
 	sync        = ""
@@ -45,19 +47,23 @@ func GetDefaults() map[string]core.Icon {
 		"clx":        {Icon: yc, Color: "color214"},
 		"curl":       {Icon: globe, Color: "blue"},
 		"duplicate":  {Icon: duplicate, Color: "yellow"},
+		"exa":        {Icon: directories, Color: "yellow"},
 		"fd":         {Icon: search, Color: "cyan"},
 		"find":       {Icon: search, Color: "cyan"},
 		"fish":       {Icon: shell, Color: "blue"},
 		"fzf":        {Icon: search, Color: "cyan"},
 		"gh":         {Icon: github, Color: "blue"},
 		"git":        {Icon: git, Color: "red"},
+		"glow":       {Icon: markdown, Color: "magenta"},
 		"go":         {Icon: golang, Color: "blue"},
 		"grep":       {Icon: search, Color: "cyan"},
 		"htop":       {Icon: graph, Color: "yellow"},
 		"http":       {Icon: globe, Color: "blue"},
+		"java":       {Icon: java, Color: "red"},
 		"lazygit":    {Icon: git, Color: "red"},
 		"less":       {Icon: text, Color: "magenta"},
 		"lf":         {Icon: directories, Color: "yellow"},
+		"ls":         {Icon: directories, Color: "yellow"},
 		"lua":        {Icon: lua, Color: "blue"},
 		"lynx":       {Icon: globe, Color: "blue"},
 		"man":        {Icon: book, Color: "magenta"},
@@ -65,15 +71,15 @@ func GetDefaults() map[string]core.Icon {
 		"mv":         {Icon: move, Color: "yellow"},
 		"nano":       {Icon: pencil, Color: "magenta"},
 		"nnn":        {Icon: directories, Color: "yellow"},
-		"node":       {Icon: node, Color: "green"},
+		"node":       {Icon: javascript, Color: "yellow"},
 		"nvim":       {Icon: vim, Color: "green"},
 		"pico":       {Icon: pencil, Color: "magenta"},
 		"ping":       {Icon: globe, Color: "blue"},
 		"ranger":     {Icon: directories, Color: "yellow"},
 		"rg":         {Icon: search, Color: "cyan"},
 		"rm":         {Icon: trash, Color: "red"},
-		"ruby":       {Icon: ruby, Color: "red"},
 		"rsync":      {Icon: sync, Color: "red"},
+		"ruby":       {Icon: ruby, Color: "red"},
 		"scp":        {Icon: computers, Color: "cyan"},
 		"sleep":      {Icon: hourglass, Color: "cyan"},
 		"ssh":        {Icon: computers, Color: "cyan"},
