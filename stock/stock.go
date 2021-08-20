@@ -16,7 +16,7 @@ const (
 	graph       = ""
 	hourglass   = ""
 	java        = ""
-	javascript  = ""
+	javascript  = ""
 	lua         = ""
 	markdown    = ""
 	move        = ""
@@ -85,6 +85,7 @@ func GetDefaults() map[string]core.Icon {
 		"ssh":        {Icon: computers, Color: "cyan"},
 		"sudo":       {Icon: warning, Color: "red"},
 		"tail":       {Icon: down, Color: "cyan"},
+		"tmux":       {Icon: tmux, Color: "green"},
 		"tig":        {Icon: git, Color: "red"},
 		"top":        {Icon: graph, Color: "yellow"},
 		"vi":         {Icon: vim, Color: "green"},
