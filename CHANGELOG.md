@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6
+_WIP_
+
+- Added more mappings
+ 
 ## 0.5
 _2021-08-21_
 
