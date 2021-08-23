@@ -2,10 +2,10 @@ package main
 
 import (
 	"despell/arguments"
-	"despell/constants"
 	"despell/core"
 	"despell/overrider"
 	"despell/stock"
+	"despell/unknown"
 	"fmt"
 )
 
@@ -41,9 +41,9 @@ func getIcon(key string, overrides, defaults map[string]core.Icon) core.Icon {
 }
 
 func getUnknownCommandIcon(overrides map[string]core.Icon) core.Icon {
-	if unknownCommandOverride, ok := overrides[constants.UnknownCommandKey]; ok {
+	if unknownCommandOverride, ok := overrides[unknown.UnknownCommandKey]; ok {
 		return unknownCommandOverride
 	}
 
-	return constants.GetUnknownCommandIcon()
+	return unknown.GetUnknownCommandIcon()
 }

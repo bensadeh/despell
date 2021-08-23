@@ -1,4 +1,4 @@
-package constants
+package unknown
 
 import "despell/core"
 
