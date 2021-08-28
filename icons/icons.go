@@ -8,7 +8,7 @@ const (
 	Docker      = ""
 	Down        = ""
 	Duplicate   = ""
-	Git         = ""
+	Git         = ""
 	Github      = ""
 	Globe       = ""
 	Golang      = ""
