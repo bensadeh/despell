@@ -27,7 +27,7 @@ func GetDefaults() map[string]core.Icon {
 		"gh":         {Icon: icons.Github, Color: colors.Blue},
 		"git":        {Icon: icons.Git, Color: colors.Red},
 		"glow":       {Icon: icons.Markdown, Color: colors.Magenta},
-		"go":         {Icon: icons.Golang, Color: colors.Blue},
+		"go":         {Icon: icons.Golang, Color: colors.Cyan},
 		"grep":       {Icon: icons.Search, Color: colors.Cyan},
 		"htop":       {Icon: icons.Graph, Color: colors.Yellow},
 		"http":       {Icon: icons.Globe, Color: colors.Blue},
