@@ -12,7 +12,7 @@
 #
 
 <p align="center">
-  <code>magica</code> is a tool for showing icons in <code>tmux</code>'s status line
+  <code>magica</code> puts icons in <code>tmux</code>'s status line
 </p>
 
 
