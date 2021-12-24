@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="assets/magica.png" width="350" />
+  <img src="assets/despell.png" width="350" />
 </p>
 
 <p align="center">
-<a href="https://github.com/bensadeh/magica/releases" target="__blank"><img src="https://img.shields.io/github/v/release/bensadeh/magica?style=flat&label=&color=7a5ccc"</a>
+<a href="https://github.com/bensadeh/despell/releases" target="__blank"><img src="https://img.shields.io/github/v/release/bensadeh/despell?style=flat&label=&color=7a5ccc"</a>
 <a href="/CHANGELOG.md" target="__blank"><img src="https://img.shields.io/badge/docs-changelog-30365F?style=flat&label=" alt="Changelog"></a>
-<a href="/LICENSE" target="__blank"><img src="https://img.shields.io/github/license/bensadeh/magica?style=flat&color=e39400&label=" alt="License"></a>
+<a href="/LICENSE" target="__blank"><img src="https://img.shields.io/github/license/bensadeh/despell?style=flat&color=e39400&label=" alt="License"></a>
 </p>
 
 
 #
 
 <p align="center">
-  <code>magica</code> puts icons in <code>tmux</code>'s status line
+  <code>despell</code> puts icons in <code>tmux</code>'s status line
 </p>
 
 
@@ -29,7 +29,7 @@
 
 ```console
 # Install
-brew install bensadeh/magica/magica
+brew install bensadeh/despell/despell
 
 # Run
 despell zsh
@@ -51,18 +51,18 @@ despell zsh
 
 ### Dependencies
 
-`magica` requires your terminal to use a [Nerd Fonts](https://www.nerdfonts.com)-patched font.
+`despell` requires your terminal to use a [Nerd Fonts](https://www.nerdfonts.com)-patched font.
 
 ## How does it work?
 
-At its core, `magica` is a just a glorified [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. 
+At its core, `despell` is a just a glorified [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. 
 It takes a string (process name) as input and returns a string (icon) as output. 
 
-## Enabling magica
+## Enabling despell
 ### How to use
 
-`magica` was created to add a corresponding Nerd Font icon next to the currently running command as reported by `tmux`
-in the status line. To use `magica`, you must edit the following segments in your `~/.tmux.conf`:
+`despell` was created to add a corresponding Nerd Font icon next to the currently running command as reported by `tmux`
+in the status line. To use `despell`, you must edit the following segments in your `~/.tmux.conf`:
 - `window-status-current-format` (active window)
 - `window-status-format` (inactive window)
 
@@ -70,7 +70,7 @@ Inside these segments, call `#(despell #W)` to map the command name to their res
 below for an example of the configuration used in the screenshot. Note that the colors may need to be adjusted to 
 your current color scheme if you're not using the `palenight` theme.
 
-`magica` is not limited to providing icons only for process names. It can be extended to give icons for **session names** (`#(despell #{session_name})`) and **hostnames** (`#(despell #H)`).
+`despell` is not limited to providing icons only for process names. It can be extended to give icons for **session names** (`#(despell #{session_name})`) and **hostnames** (`#(despell #H)`).
 
 ### Settings
 #### Update frequency
@@ -85,7 +85,7 @@ tmux set -g status-interval 5
 
 #### Per-icon colors
 
-To let `magica` set the icon color and override your theme settings, run `despell` with the 
+To let `despell` set the icon color and override your theme settings, run `despell` with the 
 `-c` flag:
 
 ```tmux
@@ -115,7 +115,7 @@ To let `magica` set the icon color and override your theme settings, run `despel
 ## Overriding and adding icons
 
 Override default icons or add new mappings by creating an `overrides.json` and placing it in
-`~/.config/magica/overrides.json`. You can either use [this example file](/examples) or the snippet 
+`~/.config/despell/overrides.json`. You can either use [this example file](/examples) or the snippet 
 below as a starting off point:
 
 ```json
@@ -128,7 +128,7 @@ below as a starting off point:
 
 ## Default mappings
 
-`magica` aims to include the most commonly used commands out of the box. Please let me know if 
+`despell` aims to include the most commonly used commands out of the box. Please let me know if 
 you think there is a command that should be included in the default mappings.
 
 For commands that are less common, please use `overrides.json` locally. 

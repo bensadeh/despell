@@ -38,10 +38,10 @@ func exists(pathToFile string) bool {
 func getPathToConfigFile() string {
 	homeDir, _ := os.UserHomeDir()
 	configDir := ".config"
-	magicaDir := "magica"
+	despellDir := "despell"
 	configFile := "overrides.json"
 
-	return path.Join(homeDir, configDir, magicaDir, configFile)
+	return path.Join(homeDir, configDir, despellDir, configFile)
 }
 
 func unmarshal(data []byte) map[string]core.Icon {
