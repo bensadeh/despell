@@ -20,12 +20,10 @@ snapshot:
 changelog:
   skip: true
 brews:
-  - name: magica
+  - name: despell
     tap:
       owner: bensadeh
-      name: homebrew-magica
-    description: "magica is a tool for showing icons in tmux's statusline"
-    homepage: "https://github.com/bensadeh/magica/"
+      name: homebrew-despell
+    description: "despell puts icons in tmux's statusline"
+    homepage: "https://github.com/bensadeh/despell/"
     license: "MIT"
-    install: |
-      bin.install "magica" => "despell"

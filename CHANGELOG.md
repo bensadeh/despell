@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.1
+_2021-12-24_
+
+- Update homebrew script
+
 ## 0.6
 _2021-12-24_
 
