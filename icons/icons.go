@@ -23,7 +23,7 @@ const (
 	Python      = ""
 	Ruby        = ""
 	Search      = ""
-	Shell       = ""
+	Shell       = ""
 	Sync        = ""
 	Text        = ""
 	Tmux        = "﬿"
