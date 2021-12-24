@@ -1,9 +1,10 @@
 # Changelog
 
 ## 0.6
-_WIP_
+_2021-12-24_
 
 - Added more mappings
+- Renamed cli to `despell`
  
 ## 0.5
 _2021-08-21_
