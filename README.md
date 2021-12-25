@@ -3,15 +3,6 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/bensadeh/despell/releases" target="__blank"><img src="https://img.shields.io/github/v/release/bensadeh/despell?style=flat&label=&color=7a5ccc"</a>
-<a href="/CHANGELOG.md" target="__blank"><img src="https://img.shields.io/badge/docs-changelog-30365F?style=flat&label=" alt="Changelog"></a>
-<a href="/LICENSE" target="__blank"><img src="https://img.shields.io/github/license/bensadeh/despell?style=flat&color=e39400&label=" alt="License"></a>
-</p>
-
-
-#
-
-<p align="center">
   <code>despell</code> puts icons in <code>tmux</code>'s status line
 </p>
 
@@ -31,7 +22,7 @@
 # Install
 brew install bensadeh/despell/despell
 
-# Run
+# Test
 despell zsh
 ```
 
@@ -45,7 +36,7 @@ Then run the following commands:
 # Install
 go install
 
-# Run
+# Test
 despell zsh
 ```
 
@@ -55,22 +46,20 @@ despell zsh
 
 ## How does it work?
 
-At its core, `despell` is a just a glorified [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. 
+At its core, `despell` is a just a [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table. 
 It takes a string (process name) as input and returns a string (icon) as output. 
 
 ## Enabling despell
 ### How to use
 
-`despell` was created to add a corresponding Nerd Font icon next to the currently running command as reported by `tmux`
-in the status line. To use `despell`, you must edit the following segments in your `~/.tmux.conf`:
+`despell` was created to add a corresponding Nerd Font icon next to the currently running command in `tmux`'s
+status line. To use `despell`, edit the following segments in your `~/.tmux.conf`:
 - `window-status-current-format` (active window)
 - `window-status-format` (inactive window)
 
 Inside these segments, call `#(despell #W)` to map the command name to their respective icons. Have a look at the layouts 
 below for an example of the configuration used in the screenshot. Note that the colors may need to be adjusted to 
 your current color scheme if you're not using the `palenight` theme.
-
-`despell` is not limited to providing icons only for process names. It can be extended to give icons for **session names** (`#(despell #{session_name})`) and **hostnames** (`#(despell #H)`).
 
 ### Settings
 #### Update frequency
@@ -79,7 +68,7 @@ To configure how often `tmux` refreshes its status line, add the following comma
 your `~/.tmux.conf`:
 
 ```tmux
-# Set how often to update the status line in seconds
+# Update the status line every X seconds
 tmux set -g status-interval 5
 ```
 
