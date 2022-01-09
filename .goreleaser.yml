@@ -29,3 +29,5 @@ brews:
     description: "despell puts icons in tmux's statusline"
     homepage: "https://github.com/bensadeh/despell/"
     license: "MIT"
+    install: |
+      man1.install "#{buildpath}/share/man/abc.1"
