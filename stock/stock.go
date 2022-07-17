@@ -54,6 +54,7 @@ func GetDefaults() map[string]core.Icon {
 		"ruby":       {Icon: icons.Ruby, Color: colors.Red},
 		"scp":        {Icon: icons.Computers, Color: colors.Cyan},
 		"sleep":      {Icon: icons.Hourglass, Color: colors.Cyan},
+		"spin":       {Icon: icons.Down, Color: colors.Cyan},
 		"ssh":        {Icon: icons.Computers, Color: colors.Cyan},
 		"sudo":       {Icon: icons.Warning, Color: colors.Red},
 		"tail":       {Icon: icons.Down, Color: colors.Cyan},
