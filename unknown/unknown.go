@@ -1,6 +1,6 @@
 package unknown
 
-import "despell/core"
+import "github.com/bensadeh/despell/core"
 
 const (
 	UnknownCommandKey = "unknownCommand"

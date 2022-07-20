@@ -1,12 +1,13 @@
 package main
 
 import (
-	"despell/arguments"
-	"despell/core"
-	"despell/overrider"
-	"despell/stock"
-	"despell/unknown"
 	"fmt"
+
+	"github.com/bensadeh/despell/arguments"
+	"github.com/bensadeh/despell/core"
+	"github.com/bensadeh/despell/overrider"
+	"github.com/bensadeh/despell/stock"
+	"github.com/bensadeh/despell/unknown"
 )
 
 func main() {
