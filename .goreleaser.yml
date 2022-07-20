@@ -31,3 +31,4 @@ brews:
     license: "MIT"
     install: |
       man1.install "#{buildpath}/share/man/abc.1"
+      bin.install "despell"
