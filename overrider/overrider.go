@@ -1,11 +1,12 @@
 package overrider
 
 import (
-	"despell/core"
 	"encoding/json"
 	"fmt"
 	"os"
 	"path"
+
+	"github.com/bensadeh/despell/core"
 )
 
 func GetOverrides() map[string]core.Icon {

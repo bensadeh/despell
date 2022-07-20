@@ -1,9 +1,9 @@
 package stock
 
 import (
-	"despell/colors"
-	"despell/core"
-	"despell/icons"
+	"github.com/bensadeh/despell/colors"
+	"github.com/bensadeh/despell/core"
+	"github.com/bensadeh/despell/icons"
 )
 
 func GetDefaults() map[string]core.Icon {
