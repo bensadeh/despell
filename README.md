@@ -69,9 +69,7 @@ status line. To use `despell`, edit the following segments in your `~/.tmux.conf
 
 Inside these segments, call `#(despell #W)` to map the command name to their respective icons. 
 
-Have a look at the layouts 
-below for an example of the configuration used in the screenshot. Note that the colors may need to be adjusted to 
-your current color scheme if you're not using the `palenight` theme.
+Have a look at the layouts below for an example of the configuration used in the screenshot.
 
 ### Settings
 #### Update frequency
