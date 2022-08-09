@@ -3,9 +3,9 @@ package unknown
 import "github.com/bensadeh/despell/core"
 
 const (
-	UnknownCommandKey = "unknownCommand"
+	MissingCommandKey = "unknownCommand"
 )
 
 func GetUnknownCommandIcon() core.Icon {
-	return core.Icon{Icon: "", Color: "gray"}
+	return core.Icon{Icon: "", Color: "gray", Emoji: "◽️"}
 }

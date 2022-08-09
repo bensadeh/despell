@@ -1,5 +1,17 @@
 {
-  "unknownCommand": {"Icon": "?", "Color": "green"},
-  "ssh": {"Icon": "◇", "Color": "red"},
-  "zsh": {"Icon": "❤", "Color": "blue"}
+  "unknownCommand": {
+    "Icon": "?",
+    "Color": "green",
+    "Emoji": "❔"
+  },
+  "ssh": {
+    "Icon": "◇",
+    "Color": "red",
+    "Emoji": "🌐"
+  },
+  "zsh": {
+    "Icon": "❤",
+    "Color": "blue",
+    "Emoji": "💙"
+  }
 }

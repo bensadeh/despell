@@ -69,7 +69,7 @@ status line. To use `despell`, edit the following segments in your `~/.tmux.conf
 
 Inside these segments, call `#(despell #W)` to map the command name to their respective icons. 
 
-Have a look at the layouts below for an example of the configuration used in the screenshot.
+Have a look at the layouts [below](#Examples) for an example of the configuration used in the screenshot.
 
 ### Settings
 #### Update frequency
@@ -91,23 +91,31 @@ To let `despell` set the icon color and override your theme settings, run `despe
 #(despell -c #W)
 ```
 
+#### Emojis
+
+To use emojis instead of Nerd Fonts, run `despell` with the `-e` flag:
+
+```tmux
+#(despell -e #W)
+```
+
 ### Examples
 
-#### [Minimal](/examples/minimal.conf)
-<p align="center">
-  <img src="assets/minimal.png" width="700" />
-</p>
-
-#### [Colors](/examples/colors.conf)
-
+#### [Colors](/examples/colors.tmux)
 <p align="center">
   <img src="assets/colors.png" width="700" />
 </p>
 
-#### [Rounded](/examples/rounded.conf)
+#### [No Colors](/examples/no-colors.tmux)
 
 <p align="center">
-  <img src="assets/rounded.png" width="700" />
+  <img src="assets/no-colors.png" width="700" />
+</p>
+
+#### [Emojis](/examples/emoji.tmux)
+
+<p align="center">
+  <img src="assets/emoji.png" width="700" />
 </p>
 
 
@@ -117,13 +125,30 @@ Override default icons or add new mappings by creating an `overrides.json` and p
 `~/.config/despell/overrides.json`. You can either use [this example file](/examples) or the snippet 
 below as a starting off point:
 
+`unknownCommand` is a reserved keyword for commands without mappings.
+
 ```json
 {
-  "ssh": {"Icon": "◇", "Color": "red"},
-  "zsh": {"Icon": "❤", "Color": "blue"},
-  "unknownCommand": {"Icon": "?", "Color": "green"}
+  "unknownCommand": {
+    "Icon": "?",
+    "Color": "green",
+    "Emoji": "❔"
+  },
+  "ssh": {
+    "Icon": "◇",
+    "Color": "red",
+    "Emoji": "🌐"
+  },
+  "zsh": {
+    "Icon": "❤",
+    "Color": "blue",
+    "Emoji": "💙"
+  }
 }
 ```
+
+## Is a mapping missing?
+Let me know by opening an Issue, Discussion or PR.
 
 ## Under the hood
 

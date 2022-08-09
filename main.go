@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/bensadeh/despell/config"
 
 	"github.com/bensadeh/despell/arguments"
 	"github.com/bensadeh/despell/core"
@@ -11,18 +12,22 @@ import (
 )
 
 func main() {
-	command, isColors := arguments.Parse()
+	settings := arguments.GetInputConfig()
 	overrides := overrider.GetOverrides()
 	defaults := stock.GetDefaults()
 
-	icon := getIcon(command, overrides, defaults)
-	output := format(isColors, icon)
+	icon := getIcon(settings.Command, overrides, defaults)
+	output := format(settings, icon)
 
 	fmt.Println(output)
 }
 
-func format(isColors bool, icon core.Icon) string {
-	if isColors {
+func format(settings *config.Settings, icon core.Icon) string {
+	if settings.UseEmoji {
+		return icon.Emoji
+	}
+
+	if settings.UseColor {
 		return "#[fg=" + icon.Color + "]" + icon.Icon
 	}
 
@@ -42,7 +47,7 @@ func getIcon(key string, overrides, defaults map[string]core.Icon) core.Icon {
 }
 
 func getUnknownCommandIcon(overrides map[string]core.Icon) core.Icon {
-	if unknownCommandOverride, ok := overrides[unknown.UnknownCommandKey]; ok {
+	if unknownCommandOverride, ok := overrides[unknown.MissingCommandKey]; ok {
 		return unknownCommandOverride
 	}
 

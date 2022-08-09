@@ -1,16 +1,24 @@
 package arguments
 
-import "os"
+import (
+	"github.com/bensadeh/despell/config"
+	"os"
+)
 
-func Parse() (string, bool) {
+func GetInputConfig() *config.Settings {
 	argsWithoutProgramName := os.Args[1:]
+	settings := new(config.Settings)
 
 	if len(argsWithoutProgramName) == 0 {
-		return "", false
+		settings.Command = ""
+
+		return settings
 	}
 
 	if len(argsWithoutProgramName) == 1 {
-		return argsWithoutProgramName[0], false
+		settings.Command = argsWithoutProgramName[0]
+
+		return settings
 	}
 
 	if len(argsWithoutProgramName) == 2 {
@@ -18,9 +26,19 @@ func Parse() (string, bool) {
 		secondArgument := argsWithoutProgramName[1]
 
 		if firstArgument == "-c" {
-			return secondArgument, true
+			settings.Command = secondArgument
+			settings.UseColor = true
+
+			return settings
+		}
+
+		if firstArgument == "-e" {
+			settings.Command = secondArgument
+			settings.UseEmoji = true
+
+			return settings
 		}
 	}
 
-	return "", false
+	return settings
 }

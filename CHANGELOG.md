@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.8
+_WIP_
+
+- Add support for using emojis instead of Nerd Fonts
+- Bump Go to 1.19
+
+## 0.7
+_2022-06-12_
+
+- Add installation method
+
 ## 0.6.1
 _2021-12-24_
 
