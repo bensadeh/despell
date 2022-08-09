@@ -1,7 +1,7 @@
 # Changelog
 
 ## 0.8
-_WIP_
+_2022-08-09_
 
 - Add support for using emojis instead of Nerd Fonts
 - Bump Go to 1.19
