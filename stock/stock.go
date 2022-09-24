@@ -12,7 +12,7 @@ func GetDefaults() map[string]core.Icon {
 		"[tmux]":     {Icon: icons.Tmux, Color: colors.Green, Emoji: "🔩"},
 		"ack":        {Icon: icons.Search, Color: colors.Cyan, Emoji: "🔦"},
 		"atop":       {Icon: icons.Graph, Color: colors.Yellow, Emoji: "📈"},
-		"bash":       {Icon: icons.Shell, Color: colors.Normal, Emoji: "🌀"},
+		"bash":       {Icon: icons.Shell, Color: colors.Normal, Emoji: "🎩"},
 		"bat":        {Icon: icons.Animal, Color: colors.Magenta, Emoji: "🦇"},
 		"cat":        {Icon: icons.Animal, Color: colors.Red, Emoji: "🐱"},
 		"clx":        {Icon: icons.Yc, Color: colors.Orange, Emoji: "🗞"},
@@ -22,7 +22,7 @@ func GetDefaults() map[string]core.Icon {
 		"exa":        {Icon: icons.Directories, Color: colors.Yellow, Emoji: "📁"},
 		"fd":         {Icon: icons.Search, Color: colors.Cyan, Emoji: "🔦"},
 		"find":       {Icon: icons.Search, Color: colors.Cyan, Emoji: "🔦"},
-		"fish":       {Icon: icons.Shell, Color: colors.Normal, Emoji: "🌀"},
+		"fish":       {Icon: icons.Shell, Color: colors.Normal, Emoji: "🐠"},
 		"fzf":        {Icon: icons.Search, Color: colors.Cyan, Emoji: "🔦"},
 		"gh":         {Icon: icons.Github, Color: colors.Blue, Emoji: "🎋"},
 		"git":        {Icon: icons.Git, Color: colors.Red, Emoji: "🎋"},
@@ -67,6 +67,6 @@ func GetDefaults() map[string]core.Icon {
 		"w3m":        {Icon: icons.Globe, Color: colors.Blue, Emoji: "🌎"},
 		"wget":       {Icon: icons.Globe, Color: colors.Blue, Emoji: "🌎"},
 		"youtube-dl": {Icon: icons.YouTube, Color: colors.Red, Emoji: "🎞"},
-		"zsh":        {Icon: icons.Shell, Color: colors.Normal, Emoji: "🌀"},
+		"zsh":        {Icon: icons.Shell, Color: colors.Normal, Emoji: "🎩"},
 	}
 }
