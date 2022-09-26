@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="assets/despell.svg" width="200" />
+  <img src="assets/despell.png" width="350" />
 </p>
-
-#
 
 <p align="center">
   <code>despell</code> puts icons in <code>tmux</code>'s status line
