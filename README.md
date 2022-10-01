@@ -9,12 +9,10 @@
 
 
 <p align="center">
-  <img src="assets/example2.png" width="700" />
+  <img src="assets/full.png" width="700" />
 </p>
 
 ## Installing
-
-<img align="right" width="300" src="assets/example3.png" alt="Screenshot">
 
 ### Homebrew
 
@@ -103,19 +101,19 @@ To use emojis instead of Nerd Fonts, run `despell` with the `-e` flag:
 
 #### [Colors](/examples/colors.tmux)
 <p align="center">
-  <img src="assets/colors.png" width="700" />
+  <img src="assets/example1.png" width="700" />
 </p>
 
 #### [No Colors](/examples/no-colors.tmux)
 
 <p align="center">
-  <img src="assets/no-colors.png" width="700" />
+  <img src="assets/example2.png" width="700" />
 </p>
 
 #### [Emojis](/examples/emoji.tmux)
 
 <p align="center">
-  <img src="assets/emoji.png" width="700" />
+  <img src="assets/example3.png" width="700" />
 </p>
 
 
