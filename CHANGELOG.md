@@ -1,7 +1,7 @@
 # Changelog
 
 ## 0.8.1
-_WIP_
+_01.09.22_
 
 - Update mappings
 
