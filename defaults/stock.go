@@ -1,4 +1,4 @@
-package stock
+package defaults
 
 import (
 	"github.com/bensadeh/despell/colors"

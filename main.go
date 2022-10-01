@@ -6,17 +6,17 @@ import (
 
 	"github.com/bensadeh/despell/arguments"
 	"github.com/bensadeh/despell/core"
+	"github.com/bensadeh/despell/defaults"
 	"github.com/bensadeh/despell/overrider"
-	"github.com/bensadeh/despell/stock"
 	"github.com/bensadeh/despell/unknown"
 )
 
 func main() {
 	settings := arguments.GetInputConfig()
 	overrides := overrider.GetOverrides()
-	defaults := stock.GetDefaults()
+	defaultMappings := defaults.GetDefaults()
 
-	icon := getIcon(settings.Command, overrides, defaults)
+	icon := getIcon(settings.Command, overrides, defaultMappings)
 	output := format(settings, icon)
 
 	fmt.Println(output)
