@@ -14,16 +14,15 @@
 
 ## Installing
 
-`despell` can be installed in several ways:
+| Method       | Command                                         |   
+|--------------|-------------------------------------------------|
+| `homebrew`   | `brew install bensadeh/despell/despell`         |     
+| `go install` | `go install github.com/bensadeh/despell@latest` |  
+| From source  | `go install`                                    |     
 
-| Method            | Command                                         |   
-|-------------------|-------------------------------------------------|
-| `homebrew`        | `brew install bensadeh/despell/despell`         |     
-| `go install`      | `go install github.com/bensadeh/despell@latest` |  
-| build from source | `go install`                                    |     
+`despell` requires your terminal to use a [Nerd Fonts](https://www.nerdfonts.com)-patched font.
 
-`despell` requires your terminal to use a [Nerd Fonts](https://www.nerdfonts.com)-patched font. If you are
-using `go install`, make sure that `$GOPATH/bin` is in your `PATH` environment variable.
+When using `go install`, make sure that `$GOPATH/bin` is in your `PATH` environment variable.
 
 ## How does it work?
 
@@ -32,9 +31,25 @@ It takes a string (process name) as input and returns a string (icon) as output.
 
 ## Getting started
 
-### Using example configs
+To use `despell`, replace all occurrences of
 
-The quickest way to start using despell is copying one of the examples below into your own `~/.tmux.conf`.
+```
+#W
+```
+
+with
+
+```
+#(despell #W) #W
+```
+
+in your `~/.tmux.conf`.
+
+If you don't have a `~/.tmux.conf` yet, have a look at the example configs below to get started.
+
+## Example configs
+
+You can start using `despell` by copying one of the examples below into your own `~/.tmux.conf`.
 
 #### [Colors](/examples/colors.tmux)
 
@@ -53,10 +68,6 @@ The quickest way to start using despell is copying one of the examples below int
 <p align="center">
   <img src="assets/example3.png" width="700" />
 </p>
-
-### Using custom themes
-
-To use `despell` with a custom theme, replace all occurrences of `#W` with `#(despell #W)` in your `~/.tmux.conf`.
 
 ### Settings
 
