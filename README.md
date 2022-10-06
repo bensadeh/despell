@@ -26,8 +26,7 @@ When using `go install`, make sure that `$GOPATH/bin` is in your `PATH` environm
 
 ## How does it work?
 
-At its core, `despell` is a just a [hash map](https://en.wikipedia.org/wiki/Hash_table) lookup table.
-It takes a string (process name) as input and returns a string (icon) as output.
+At its core, `despell` takes a string (process name) as input and returns a string (icon) as output.
 
 ## Getting started
 
