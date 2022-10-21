@@ -68,9 +68,9 @@ You can start using `despell` by copying one of the examples below into your own
   <img src="assets/example3.png" width="700" />
 </p>
 
-### Settings
+## Settings
 
-#### Update frequency
+### Update frequency
 
 To configure how often `tmux` refreshes its status line, add the following command to
 your `~/.tmux.conf`:
@@ -80,7 +80,7 @@ your `~/.tmux.conf`:
 tmux set -g status-interval 5
 ```
 
-#### Per-icon colors
+### Per-icon colors
 
 To let `despell` set the icon color and override your theme settings, run `despell` with the
 `-c` flag:
@@ -89,7 +89,7 @@ To let `despell` set the icon color and override your theme settings, run `despe
 #(despell -c #W)
 ```
 
-#### Emojis
+### Emojis
 
 To use emojis instead of Nerd Fonts, run `despell` with the `-e` flag:
 
