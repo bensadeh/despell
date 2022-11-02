@@ -21,6 +21,7 @@ func GetDefaults() map[string]core.Icon {
 		"curl":       {Icon: nerdfont.Globe, Color: colors.Blue, Emoji: emoji.Globe},
 		"docker":     {Icon: nerdfont.Docker, Color: colors.Blue, Emoji: emoji.Whale},
 		"duplicate":  {Icon: nerdfont.Duplicate, Color: colors.Yellow, Emoji: emoji.Leaves},
+		"emacs":      {Icon: nerdfont.Emacs, Color: colors.Magenta, Emoji: emoji.Pen},
 		"exa":        {Icon: nerdfont.Directories, Color: colors.Yellow, Emoji: emoji.Folder},
 		"fd":         {Icon: nerdfont.Search, Color: colors.Cyan, Emoji: emoji.MagnifyingGlass},
 		"find":       {Icon: nerdfont.Search, Color: colors.Cyan, Emoji: emoji.MagnifyingGlass},
