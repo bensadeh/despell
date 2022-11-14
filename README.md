@@ -70,6 +70,16 @@ You can start using `despell` by copying one of the examples below into your own
 
 ## Settings
 
+### Center alignment
+
+To center the status line instead of left aligned (default), add the following command to
+your `~/.tmux.conf`:
+
+```tmux
+# Set alignment
+set -g status-justify centre
+```
+
 ### Update frequency
 
 To configure how often `tmux` refreshes its status line, add the following command to
@@ -77,7 +87,7 @@ your `~/.tmux.conf`:
 
 ```tmux
 # Update the status line every X seconds
-tmux set -g status-interval 5
+set -g status-interval 5
 ```
 
 ### Per-icon colors
