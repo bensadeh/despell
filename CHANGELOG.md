@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.x
+
+_WIP_
+
+- Update mappings
+
 ## 0.8.2
 
 _04.12.22_
