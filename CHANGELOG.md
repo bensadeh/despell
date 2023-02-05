@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.9.0
+## 0.9
 
-_WIP_
+_05.02.23_
 
 - Changed fallback key from `unknownCommand` to `default`
 - Update mappings
