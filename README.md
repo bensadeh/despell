@@ -113,14 +113,15 @@ Override default icons or add new mappings by creating an `overrides.json` and p
 `~/.config/despell/overrides.json`. You can either use [this example file](/examples) or the snippet
 below as a starting off point:
 
-`unknownCommand` is a reserved keyword for commands without mappings.
+`default` is a special keyword for commands without mappings. Commands that do not have a specified mapping will
+resolve to this mapping as a fallback.
 
 ```json
 {
-  "unknownCommand": {
-    "Icon": "?",
-    "Color": "green",
-    "Emoji": "❔"
+  "default": {
+    "Icon": "",
+    "Color": "magenta",
+    "Emoji": "🐠"
   },
   "ssh": {
     "Icon": "◇",

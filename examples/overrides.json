@@ -1,5 +1,5 @@
 {
-  "unknownCommand": {
+  "default": {
     "Icon": "?",
     "Color": "green",
     "Emoji": "❔"

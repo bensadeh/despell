@@ -1,4 +1,4 @@
-package defaults
+package stock
 
 import (
 	"github.com/bensadeh/despell/color"
@@ -7,13 +7,16 @@ import (
 	"github.com/bensadeh/despell/nerdfont"
 )
 
-func GetDefaults() map[string]core.Icon {
+func GetDefaultIcon() core.Icon {
+	return core.Icon{Icon: nerdfont.Shell, Color: color.Normal, Emoji: emoji.TopHat}
+}
+
+func GetStockMappings() map[string]core.Icon {
 	return map[string]core.Icon{
 		"Python":     {Icon: nerdfont.Python, Color: color.Yellow, Emoji: emoji.Snake},
 		"[tmux]":     {Icon: nerdfont.Tmux, Color: color.Green, Emoji: emoji.NutAndBold},
 		"ack":        {Icon: nerdfont.Search, Color: color.Cyan, Emoji: emoji.MagnifyingGlass},
 		"atop":       {Icon: nerdfont.Graph, Color: color.Yellow, Emoji: emoji.Microscope},
-		"bash":       {Icon: nerdfont.Shell, Color: color.Normal, Emoji: emoji.TopHat},
 		"bat":        {Icon: nerdfont.Animal, Color: color.Magenta, Emoji: emoji.Bat},
 		"cargo":      {Icon: nerdfont.Rust, Color: color.Red, Emoji: emoji.Crab},
 		"cat":        {Icon: nerdfont.Animal, Color: color.Red, Emoji: emoji.Cat},
@@ -25,7 +28,6 @@ func GetDefaults() map[string]core.Icon {
 		"exa":        {Icon: nerdfont.Directories, Color: color.Yellow, Emoji: emoji.Folder},
 		"fd":         {Icon: nerdfont.Search, Color: color.Cyan, Emoji: emoji.MagnifyingGlass},
 		"find":       {Icon: nerdfont.Search, Color: color.Cyan, Emoji: emoji.MagnifyingGlass},
-		"fish":       {Icon: nerdfont.Shell, Color: color.Normal, Emoji: emoji.TropicalFish},
 		"fzf":        {Icon: nerdfont.Search, Color: color.Cyan, Emoji: emoji.MagnifyingGlass},
 		"gh":         {Icon: nerdfont.Github, Color: color.Blue, Emoji: emoji.TanabataTree},
 		"git":        {Icon: nerdfont.Git, Color: color.Red, Emoji: emoji.Wood},
@@ -72,6 +74,5 @@ func GetDefaults() map[string]core.Icon {
 		"w3m":        {Icon: nerdfont.Globe, Color: color.Blue, Emoji: emoji.Globe},
 		"wget":       {Icon: nerdfont.Globe, Color: color.Blue, Emoji: emoji.Globe},
 		"youtube-dl": {Icon: nerdfont.YouTube, Color: color.Red, Emoji: emoji.FilmFrames},
-		"zsh":        {Icon: nerdfont.Shell, Color: color.Normal, Emoji: emoji.TopHat},
 	}
 }

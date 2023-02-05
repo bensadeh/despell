@@ -3,20 +3,24 @@ package main
 import (
 	"fmt"
 	"github.com/bensadeh/despell/config"
+	"github.com/bensadeh/despell/stock"
 
 	"github.com/bensadeh/despell/arguments"
 	"github.com/bensadeh/despell/core"
-	"github.com/bensadeh/despell/defaults"
 	"github.com/bensadeh/despell/overrider"
-	"github.com/bensadeh/despell/unknown"
+)
+
+const (
+	MissingCommandKey = "default"
 )
 
 func main() {
 	settings := arguments.GetInputConfig()
 	overrides := overrider.GetOverrides()
-	defaultMappings := defaults.GetDefaults()
+	stockMappings := stock.GetStockMappings()
+	defaultIcon := stock.GetDefaultIcon()
 
-	icon := getIcon(settings.Command, overrides, defaultMappings)
+	icon := getIcon(settings.Command, overrides, stockMappings, defaultIcon)
 	output := format(settings, icon)
 
 	fmt.Println(output)
@@ -34,7 +38,7 @@ func format(settings *config.Settings, icon core.Icon) string {
 	return icon.Icon
 }
 
-func getIcon(key string, overrides, defaults map[string]core.Icon) core.Icon {
+func getIcon(key string, overrides, defaults map[string]core.Icon, defaultIcon core.Icon) core.Icon {
 	if overridesIcon, ok := overrides[key]; ok {
 		return overridesIcon
 	}
@@ -43,13 +47,9 @@ func getIcon(key string, overrides, defaults map[string]core.Icon) core.Icon {
 		return defaultsIcon
 	}
 
-	return getUnknownCommandIcon(overrides)
-}
-
-func getUnknownCommandIcon(overrides map[string]core.Icon) core.Icon {
-	if unknownCommandOverride, ok := overrides[unknown.MissingCommandKey]; ok {
-		return unknownCommandOverride
+	if overridesIcon, ok := overrides[MissingCommandKey]; ok {
+		return overridesIcon
 	}
 
-	return unknown.GetUnknownCommandIcon()
+	return defaultIcon
 }
