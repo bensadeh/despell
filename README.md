@@ -5,7 +5,7 @@
 #
 
 <p align="center">
-  <code>despell</code> puts icons in <code>tmux</code>'s status line
+  <code>despell</code> maps commands to icons in <code>tmux</code>'s status line
 </p>
 
 <p align="center">
