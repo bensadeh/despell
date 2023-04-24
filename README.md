@@ -14,7 +14,7 @@
 
 ### Features
 
-- ⚡️ **Fast** — Instand lookup time ($O(1)$)
+- ⚡️ **Fast** — Instand lookup time ($O(1)$ )
 - 🌈 **Simple** — Use despell with any theme you'd like
 - ⚙️ **Customizable** — Use custom mappings or override the default ones
 
