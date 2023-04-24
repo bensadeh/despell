@@ -14,7 +14,7 @@
 
 ### Features
 
-- ⚡️ **Fast** — Instant lookup time ($O(1)$ )
+- ⚡️ **Fast** — Instant lookup time (`O(1)`)
 - 🌈 **Simple** — Use despell with any theme you'd like
 - ⚙️ **Customizable** — Change or add any mapping
 
