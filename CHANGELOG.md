@@ -1,4 +1,9 @@
 # Changelog
+## 0.10
+
+_WIP_
+
+- Updated all mappings to be compatible with Nerd Fonts 3
 
 ## 0.9
 
