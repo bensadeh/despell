@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/despell.png" width="350" />
+  <img src="assets/despell-text.png" width="150" />
 </p>
 
 #
@@ -52,27 +52,40 @@ in your `~/.tmux.conf`.
 
 If you don't have a `~/.tmux.conf` yet, have a look at the example configs below to get started.
 
-## Example configs
+## Example config
 
-You can start using `despell` by copying one of the examples below into your own `~/.tmux.conf`.
+You can start using `despell` by using the example config from the screenshot. Copy of the config below into your 
+own `~/.tmux.conf`.
 
-#### [Colors](/examples/colors.tmux)
+```tmux
+# Colors
+tmux_active_fg=#a6accd
+tmux_active_bg=#414863
+tmux_inactive_fg=default
+tmux_statusbar_bg=#232235
 
-<p align="center">
-  <img src="assets/example1.png" width="700" />
-</p>
+# Window status separator
+set-window-option -g window-status-separator ''
 
-#### [No Colors](/examples/no-colors.tmux)
+# Status bar
+set-option -g status-style bg=$tmux_statusbar_bg
+set-option -g status-left ""
+set-option -g status-right ""
 
-<p align="center">
-  <img src="assets/example2.png" width="700" />
-</p>
+# Justify status bar
+set -g status-justify centre
 
-#### [Emojis](/examples/emoji.tmux)
+# Active
+set-window-option -g window-status-current-format "\
+#[bg=$tmux_active_bg] #(despell -c #W)\
+#[fg=$tmux_active_fg bg=$tmux_active_bg] #W "
 
-<p align="center">
-  <img src="assets/example3.png" width="700" />
-</p>
+# Inactive
+set-window-option -g window-status-format "\
+#[fg=$tmux_inactive_fg,bg=$tmux_statusbar_bg] #(despell -c #W)\
+#[fg=$tmux_inactive_fg,dim bg=$tmux_statusbar_bg] #W "
+
+```
 
 ## Settings
 
@@ -125,7 +138,7 @@ resolve to this mapping as a fallback.
 ```json
 {
   "default": {
-    "Icon": "",
+    "Icon": "◒",
     "Color": "magenta",
     "Emoji": "🐠"
   },
