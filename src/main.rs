@@ -1,5 +1,6 @@
 use std::env;
 
+mod color;
 mod defaults;
 mod icon;
 mod nerdfonts;
