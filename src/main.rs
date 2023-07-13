@@ -2,6 +2,7 @@ use std::env;
 
 mod color;
 mod defaults;
+mod emojis;
 mod icon;
 mod nerdfonts;
 
