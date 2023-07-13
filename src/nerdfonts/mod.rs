@@ -32,4 +32,3 @@ pub const VI: &str = "";
 pub const WARNING: &str = "";
 pub const ZIP: &str = "󰗄";
 pub const YC: &str = "";
-pub const YOUTUBE: &str = "";

@@ -48,10 +48,15 @@ static DEFAULT_MAPPINGS: phf::Map<&'static str, (&'static str, Color, &'static s
     "ranger" => (nerdfonts::DIRECTORIES, Color::Yellow, emojis::FOLDER),
     "rg" => (nerdfonts::SEARCH, Color::Cyan, emojis::MAGNIFYING_GLASS),
     "rm" => (nerdfonts::TRASH, Color::Red, emojis::CROSS_MARK),
+    "rsync" => (nerdfonts::SYNC, Color::Red, emojis::ANTICLOCKWISE_ARROWS),
+    "ruby" => (nerdfonts::RUBY, Color::Red, emojis::DIAMONDS_SUIT),
     "scp" => (nerdfonts::COMPUTERS, Color::Cyan, emojis::COMPUTER),
     "sed" => (nerdfonts::TEXT, Color::Magenta, emojis::BOOK_RED),
     "sk" => (nerdfonts::SEARCH, Color::Cyan, emojis::MAGNIFYING_GLASS),
+    "sleep" => (nerdfonts::HOURGLASS, Color::Cyan, emojis::ZZZ),
+    "spin" => (nerdfonts::DOWN, Color::Cyan, emojis::SPIN),
     "ssh" => (nerdfonts::COMPUTERS, Color::Yellow, emojis::KEY),
+    "sudo" => (nerdfonts::WARNING, Color::Red, emojis::RED_EXCLAMATION_MARK),
     "tail" => (nerdfonts::DOWN, Color::Green, emojis::DOWN_POINTING_TRIANGLE),
     "tar" => (nerdfonts::ZIP, Color::Orange, emojis::COMPRESSED),
     "top" => (nerdfonts::GRAPH, Color::Yellow, emojis::MICROSCOPE),
@@ -64,7 +69,7 @@ static DEFAULT_MAPPINGS: phf::Map<&'static str, (&'static str, Color, &'static s
 pub fn get_icon(command: &str) -> Option<Icon> {
     DEFAULT_MAPPINGS
         .get(command)
-        .map(|(nerdfont, Color, emojis)| {
-            Icon::new(nerdfont.to_string(), Color.clone(), emojis.to_string())
+        .map(|(nerdfont, color, emojis)| {
+            Icon::new(nerdfont.to_string(), color.clone(), emojis.to_string())
         })
 }
