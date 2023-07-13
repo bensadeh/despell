@@ -4,6 +4,7 @@ pub const BOOK_BLUE: &str = "📘";
 pub const BOOK_RED: &str = "📕";
 pub const CAT: &str = "🐱";
 pub const COFFEE: &str = "☕️";
+pub const COMPRESSED: &str = "🗜";
 pub const COMPUTER: &str = "🖥";
 pub const CRAB: &str = "🦀";
 pub const CROSS_MARK: &str = "❌";
