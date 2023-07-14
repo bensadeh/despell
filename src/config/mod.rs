@@ -8,7 +8,7 @@ use std::{env, fs};
 #[derive(Deserialize, Debug, Clone)]
 pub struct CustomIcon {
     nerdfont: Option<String>,
-    color: Option<String>,
+    color: Option<Color>,
     emoji: Option<String>,
 }
 
@@ -30,7 +30,9 @@ impl Icons {
             nerdfont: icon
                 .nerdfont
                 .unwrap_or_else(|| self.default_icon.nerdfont.clone().unwrap()),
-            color: Color::None,
+            color: icon
+                .color
+                .unwrap_or_else(|| self.default_icon.color.clone().unwrap()),
             emoji: icon
                 .emoji
                 .unwrap_or_else(|| self.default_icon.emoji.clone().unwrap()),
