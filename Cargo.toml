@@ -2,7 +2,12 @@
 name = "despell"
 version = "1.0.0"
 edition = "2021"
-
+authors = ["Ben Sadeh"]
+description = "despell puts icons in your tmux statusline"
+repository = "https://github.com/bensadeh/despell"
+keywords = ["tmux", "nerdfonts", "nerdfont", "stausline", "statusbar", "icons"]
+license = "MIT"
 
 [dependencies]
 phf = { version = "0.11.2", features = ["macros"] }
+clap = { version = "4.3.11", features = ["derive"] }
