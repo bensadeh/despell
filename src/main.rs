@@ -12,12 +12,12 @@ struct Args {
     #[clap(name = "COMMAND")]
     cmd_name: String,
 
-    /// Follow (tail) the contents of the file
-    #[clap(short = 'c', long = "color")]
+    /// Let despell set the color for the icon
+    #[clap(short = 'c', long = "color", conflicts_with = "emoji")]
     color: bool,
 
-    /// Provide a custom path configuration file
-    #[clap(short = 'e', long = "emoji")]
+    /// Use emojis instead of nerdfonts
+    #[clap(short = 'e', long = "emoji", conflicts_with = "color")]
     emoji: bool,
 
     /// Provide a custom path configuration file
