@@ -7,12 +7,13 @@ mod icon;
 mod nerdfonts;
 
 #[derive(Parser)]
+#[clap(version = env!("CARGO_PKG_VERSION"))]
 struct Args {
     /// Command name
     #[clap(name = "COMMAND")]
     cmd_name: String,
 
-    /// Let despell set the color for the icon
+    /// Let despell override the color of the icon
     #[clap(short = 'c', long = "color", conflicts_with = "emoji")]
     color: bool,
 
@@ -20,10 +21,11 @@ struct Args {
     #[clap(short = 'e', long = "emoji", conflicts_with = "color")]
     emoji: bool,
 
-    /// Provide a custom path configuration file
+    /// Use custom mappings from ~/.config/despell/config.toml
     #[clap(short = 'u', long = "custom")]
     custom: bool,
 }
+
 fn main() {
     let args: Args = Args::parse();
     let cmd_name = args.cmd_name;
