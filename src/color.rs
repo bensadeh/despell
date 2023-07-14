@@ -2,6 +2,7 @@ use std::fmt;
 
 #[derive(Clone)]
 pub enum Color {
+    None,
     Red,
     Green,
     Blue,
@@ -9,12 +10,12 @@ pub enum Color {
     Magenta,
     Cyan,
     Orange,
-    // More colors here if needed
 }
 
 impl fmt::Display for Color {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
+            Color::None => write!(f, "color0"),
             Color::Red => write!(f, "color1"),
             Color::Green => write!(f, "color2"),
             Color::Blue => write!(f, "color3"),
