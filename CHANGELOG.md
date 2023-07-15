@@ -1,4 +1,12 @@
 # Changelog
+
+## 1.0.0
+
+_WIP_
+
+- `despell` has been rewritten in Rust
+- Override default mappings with `config.toml` instead of `overrides.json`
+
 ## 0.10
 
 _31.05.23_
