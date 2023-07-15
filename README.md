@@ -27,8 +27,8 @@ cargo install despell
 > **Note**
 > Make sure that `$HOME/.cargo/bin` is in your `PATH` environment variable
 
-> **Note**
-> `despell` requires your terminal to use a [Nerd Fonts](https://www.nerdfonts.com)-patched font.
+
+`despell` requires your terminal to use a [Nerd Fonts](https://www.nerdfonts.com)-patched font.
 
 ## How does it work?
 
