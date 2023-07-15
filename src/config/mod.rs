@@ -41,18 +41,40 @@ impl Icons {
 }
 
 pub fn parse_config_and_get_icon(path: &str, command: &str) -> Icon {
-    let expanded_path = if path.starts_with('~') {
-        let home = env::var("HOME").expect("The HOME environment variable is not set");
-        PathBuf::from(home).join(path.strip_prefix('~').expect("Invalid path"))
-    } else {
-        PathBuf::from(path)
+    let absolute_path = get_path(path);
+
+    let content = match fs::read_to_string(absolute_path) {
+        Ok(content) => content,
+        Err(_) => exit_with_message("Could not read the TOML configuration file"),
     };
 
-    let content =
-        fs::read_to_string(expanded_path).expect("Failed to read the TOML configuration file");
-
-    let icons: Icons =
-        toml::from_str(&content).expect("Failed to parse the TOML configuration file");
+    let icons: Icons = match toml::from_str(&content) {
+        Ok(icons) => icons,
+        Err(_) => exit_with_message("Could not parse the TOML configuration file"),
+    };
 
     icons.get_icon(command)
+}
+
+fn get_path(path: &str) -> PathBuf {
+    if !(path.starts_with('~')) {
+        return PathBuf::from(path);
+    }
+
+    let home = match env::var("HOME") {
+        Ok(home) => home,
+        Err(_) => exit_with_message("The HOME environment variable is not set"),
+    };
+
+    let path_without_prefix = match path.strip_prefix('~') {
+        Some(path) => path,
+        None => exit_with_message("Could not strip ~ from path"),
+    };
+
+    PathBuf::from(home).join(path_without_prefix)
+}
+
+fn exit_with_message(message: &str) -> ! {
+    eprintln!("{}", message);
+    std::process::exit(1);
 }
