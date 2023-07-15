@@ -1,9 +1,14 @@
 use crate::color::Color;
 use crate::{emojis, nerdfonts};
+use serde::Deserialize;
 
+#[derive(Deserialize, Debug, Clone)]
 pub struct Icon {
+    #[serde(default = "default_nerdfont")]
     pub nerdfont: String,
+    #[serde(default = "default_color")]
     pub color: Color,
+    #[serde(default = "default_emoji")]
     pub emoji: String,
 }
 
@@ -25,4 +30,16 @@ impl Default for Icon {
             emoji: emojis::TOP_HAT.to_string(),
         }
     }
+}
+
+fn default_nerdfont() -> String {
+    nerdfonts::SHELL.to_string()
+}
+
+fn default_color() -> Color {
+    Color::None
+}
+
+fn default_emoji() -> String {
+    emojis::TOP_HAT.to_string()
 }

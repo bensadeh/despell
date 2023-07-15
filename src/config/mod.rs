@@ -1,49 +1,34 @@
-use crate::color::Color;
+use crate::defaults;
 use crate::icon::Icon;
 use serde::Deserialize;
 use std::collections::HashMap;
 use std::path::PathBuf;
 use std::{env, fs};
 
-#[derive(Deserialize, Debug, Clone)]
-pub struct CustomIcon {
-    nerdfont: Option<String>,
-    color: Option<Color>,
-    emoji: Option<String>,
-}
-
 #[derive(Deserialize, Debug)]
-pub struct Icons {
+pub struct CustomMappings {
     #[serde(rename = "default")]
-    default_icon: CustomIcon,
+    default_icon: Icon,
 
     #[serde(rename = "icons")]
-    custom_icons: HashMap<String, CustomIcon>,
-}
-
-impl Icons {
-    pub fn get_icon(&self, command: &str) -> Icon {
-        let icon = self
-            .custom_icons
-            .get(command)
-            .unwrap_or(&self.default_icon)
-            .clone();
-
-        Icon {
-            nerdfont: icon
-                .nerdfont
-                .unwrap_or_else(|| self.default_icon.nerdfont.clone().unwrap()),
-            color: icon
-                .color
-                .unwrap_or_else(|| self.default_icon.color.clone().unwrap()),
-            emoji: icon
-                .emoji
-                .unwrap_or_else(|| self.default_icon.emoji.clone().unwrap()),
-        }
-    }
+    icons: HashMap<String, Icon>,
 }
 
 pub fn parse_config_and_get_icon(path: &str, command: &str) -> Icon {
+    let custom_mappings = parse_config(path);
+
+    if let Some(icon) = custom_mappings.icons.get(command) {
+        return icon.clone();
+    }
+
+    if let Some(icon) = defaults::get_icon(command) {
+        return icon;
+    }
+
+    custom_mappings.default_icon
+}
+
+pub fn parse_config(path: &str) -> CustomMappings {
     let absolute_path = get_path(path);
 
     let content = match fs::read_to_string(absolute_path) {
@@ -51,12 +36,12 @@ pub fn parse_config_and_get_icon(path: &str, command: &str) -> Icon {
         Err(_) => exit_with_message("Could not read the TOML configuration file"),
     };
 
-    let icons: Icons = match toml::from_str(&content) {
+    let custom_mappings: CustomMappings = match toml::from_str(&content) {
         Ok(icons) => icons,
         Err(e) => exit_with_message(&format!("{}", e)),
     };
 
-    icons.get_icon(command)
+    custom_mappings
 }
 
 fn get_path(path: &str) -> PathBuf {
