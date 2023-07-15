@@ -1,14 +1,14 @@
 [default]
-nerdfont = ""
-color = ""
-emoji = ""
-
-[icons.command1]
 nerdfont = "icon1"
-color = "color1"
+color = "none"
 emoji = "emoji1"
 
-[icons.command2]
+[icons.command1]
 nerdfont = "icon2"
-color = "color2"
+color = "blue"
 emoji = "emoji2"
+
+[icons.command2]
+nerdfont = "icon3"
+color = "magenta"
+emoji = "emoji3"

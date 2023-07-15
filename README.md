@@ -20,15 +20,15 @@
 
 ## Installing
 
-| Method       | Command                                         |   
-|--------------|-------------------------------------------------|
-| `homebrew`   | `brew install bensadeh/despell/despell`         |     
-| `go install` | `go install github.com/bensadeh/despell@latest` |  
-| From source  | `go install`                                    |     
+```console
+cargo install despell
+```
 
-`despell` requires your terminal to use a [Nerd Fonts](https://www.nerdfonts.com)-patched font.
+> **Note**
+> Make sure that `$HOME/.cargo/bin` is in your `PATH` environment variable
 
-When using `go install`, make sure that `$GOPATH/bin` is in your `PATH` environment variable.
+> **Note**
+> `despell` requires your terminal to use a [Nerd Fonts](https://www.nerdfonts.com)-patched font.
 
 ## How does it work?
 
@@ -36,7 +36,7 @@ At its core, `despell` takes a string (process name) as input and returns a stri
 
 ## Getting started
 
-To use `despell`, replace all occurrences of
+To use `despell` in your existing config, replace all occurrences of
 
 ```
 #W
@@ -54,8 +54,8 @@ If you don't have a `~/.tmux.conf` yet, have a look at the example configs below
 
 ## Example config
 
-You can start using `despell` by using the example config from the screenshot. Copy of the config below into your 
-own `~/.tmux.conf`.
+You can start using `despell` by using the example config from the screenshot. Copy of the config below into your
+own `~/.tmux.conf` to get started.
 
 ```tmux
 # Colors
@@ -112,7 +112,7 @@ set -g status-interval 5
 ### Per-icon colors
 
 To let `despell` set the icon color and override your theme settings, run `despell` with the
-`-c` flag:
+`-c` or `--color` flag:
 
 ```tmux
 #(despell -c #W)
@@ -120,7 +120,7 @@ To let `despell` set the icon color and override your theme settings, run `despe
 
 ### Emojis
 
-To use emojis instead of Nerd Fonts, run `despell` with the `-e` flag:
+To use emojis instead of Nerd Fonts, run `despell` with the `-e` or `--emoji` flag:
 
 ```tmux
 #(despell -e #W)
@@ -128,40 +128,28 @@ To use emojis instead of Nerd Fonts, run `despell` with the `-e` flag:
 
 ## Overriding and adding icons
 
-Override default icons or add new mappings by creating an `overrides.json` and placing it in
-`~/.config/despell/overrides.json`. You can either use [this example file](/examples) or the snippet
-below as a starting off point:
+To override any of the default mappings, run `despell` with the `-u` or `--custom` flag. Place a `config.toml` in
+`~/.config/despell/config.toml` with your custom mappings.
 
-`default` is a special keyword for commands without mappings. Commands that do not have a specified mapping will
-resolve to this mapping as a fallback.
+All fields are optional, so if you don't use emojis, you can safely omit the fields from the `TOML`.
 
-```json
-{
-  "default": {
-    "Icon": "◒",
-    "Color": "magenta",
-    "Emoji": "🐠"
-  },
-  "ssh": {
-    "Icon": "◇",
-    "Color": "red",
-    "Emoji": "🌐"
-  },
-  "zsh": {
-    "Icon": "❤",
-    "Color": "blue",
-    "Emoji": "💙"
-  }
-}
+```toml
+[default]
+nerdfont = "◒"
+color = "none"
+emoji = "🐠"
+
+[icons.command1]
+nerdfont = "◇"
+color = "blue"
+emoji = "🌐"
+
+[icons.command2]
+nerdfont = "❤"
+color = "magenta"
+emoji = "💙"
 ```
 
 ## Is a mapping missing?
 
 Let me know by opening an Issue, Discussion or PR.
-
-## Under the hood
-
-Screenshots use:
-
-* [iTerm2](https://iterm2.com/) for the terminal
-* [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) for the font
