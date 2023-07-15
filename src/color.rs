@@ -16,14 +16,14 @@ pub enum Color {
 impl fmt::Display for Color {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
-            Color::None => write!(f, "color0"),
-            Color::Red => write!(f, "color1"),
-            Color::Green => write!(f, "color2"),
-            Color::Blue => write!(f, "color3"),
-            Color::Yellow => write!(f, "color3"),
-            Color::Magenta => write!(f, "color3"),
-            Color::Cyan => write!(f, "color3"),
-            Color::Orange => write!(f, "color3"),
+            Color::None => write!(f, "default"),
+            Color::Red => write!(f, "Red"),
+            Color::Green => write!(f, "Green"),
+            Color::Blue => write!(f, "Blue"),
+            Color::Yellow => write!(f, "Yellow"),
+            Color::Magenta => write!(f, "Magenta"),
+            Color::Cyan => write!(f, "Cyan"),
+            Color::Orange => write!(f, "color214"),
         }
     }
 }
