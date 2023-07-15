@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/despell-text.png" width="150" />
+  <img src="assets/despell.png" width="150" />
 </p>
 
 #
