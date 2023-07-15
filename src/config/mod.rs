@@ -14,7 +14,10 @@ pub struct CustomIcon {
 
 #[derive(Deserialize, Debug)]
 pub struct Icons {
+    #[serde(rename = "default")]
     default_icon: CustomIcon,
+
+    #[serde(rename = "icons")]
     custom_icons: HashMap<String, CustomIcon>,
 }
 
@@ -50,14 +53,14 @@ pub fn parse_config_and_get_icon(path: &str, command: &str) -> Icon {
 
     let icons: Icons = match toml::from_str(&content) {
         Ok(icons) => icons,
-        Err(_) => exit_with_message("Could not parse the TOML configuration file"),
+        Err(e) => exit_with_message(&format!("{}", e)),
     };
 
     icons.get_icon(command)
 }
 
 fn get_path(path: &str) -> PathBuf {
-    if !(path.starts_with('~')) {
+    if !path.starts_with('~') {
         return PathBuf::from(path);
     }
 
@@ -66,7 +69,7 @@ fn get_path(path: &str) -> PathBuf {
         Err(_) => exit_with_message("The HOME environment variable is not set"),
     };
 
-    let path_without_prefix = match path.strip_prefix('~') {
+    let path_without_prefix = match path.strip_prefix("~/") {
         Some(path) => path,
         None => exit_with_message("Could not strip ~ from path"),
     };
