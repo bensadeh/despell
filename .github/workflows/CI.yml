@@ -1,0 +1,32 @@
+name: Continuous Integration
+
+on: [ push, pull_request ]
+
+jobs:
+  build_and_test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Setup Rust
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Build and test
+        run: |
+          cargo build --verbose
+          cargo test --verbose
+
+      - name: Check Cargo.lock
+        run: |
+          git diff --exit-code -- Cargo.lock
+          if [ $? -ne 0 ]; then
+            echo "Cargo.lock was modified. Please commit the changes."
+            exit 1
+          fi
