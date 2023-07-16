@@ -2,7 +2,7 @@
 
 ## 1.0.0
 
-_WIP_
+_16.07.23_
 
 - `despell` has been rewritten in Rust
 - Override default mappings with `config.toml` instead of `overrides.json`
