@@ -15,12 +15,14 @@
 ### Features
 
 - 🗺️ Map running commands to nerdfont icons
-- 🎨 Customize the output with colors or even emojis
+- 🎨 Customization options for per command coloring and emojis
 - 🔄 Easy to override default mappings
 - ⚡ Uses HashMap under the hood for instant lookup times (`O(1)`)
 - 🔧 Simple to use and integrate into other themes
 
 ## Installing
+
+### Cargo
 
 ```console
 cargo install despell
@@ -29,6 +31,7 @@ cargo install despell
 > **Note**
 > Make sure that `$HOME/.cargo/bin` is in your `PATH` environment variable
 
+### Requirements
 
 `despell` requires your terminal to use a [Nerd Fonts](https://www.nerdfonts.com)-patched font.
 
