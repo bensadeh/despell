@@ -17,7 +17,7 @@
 - 🗺️ Map running commands to nerdfont icons
 - 🎨 Customization options for per command coloring and emojis
 - 🔄 Easy to override default mappings
-- ⚡ Uses HashMap under the hood for instant lookup times (`O(1)`)
+- ⚡ Fast (Instant lookup time `O(1)`)
 - 🔧 Simple to use and integrate into other themes
 
 ## Installing
