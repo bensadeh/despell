@@ -25,9 +25,9 @@ impl Icon {
 impl Default for Icon {
     fn default() -> Self {
         Icon {
-            nerdfont: nerdfonts::SHELL.to_string(),
-            color: Color::None,
-            emoji: emojis::TOP_HAT.to_string(),
+            nerdfont: default_nerdfont(),
+            color: default_color(),
+            emoji: default_emoji(),
         }
     }
 }
