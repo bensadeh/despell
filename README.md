@@ -14,9 +14,11 @@
 
 ### Features
 
-- ⚡️ **Fast** — Instant lookup time (`O(1)`)
-- 🌈 **Simple** — Use despell with any theme you'd like
-- ⚙️ **Customizable** — Change or add any mapping
+- 🗺️ Map running commands to nerdfont icons
+- 🎨 Customize the output with colors or even emojis
+- 🔄 Easy to override default mappings
+- ⚡ Uses HashMap under the hood for instant lookup times (`O(1)`)
+- 🔧 Simple to use and integrate into other themes
 
 ## Installing
 
