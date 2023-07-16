@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["Ben Sadeh"]
 description = "despell puts icons in your tmux statusline"
 repository = "https://github.com/bensadeh/despell"
-keywords = ["tmux", "nerdfonts", "nerdfont", "stausline", "statusbar", "icons"]
+keywords = ["tmux", "nerdfonts", "stausline", "statusbar", "icons"]
 license = "MIT"
 
 [dependencies]
