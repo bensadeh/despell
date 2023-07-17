@@ -14,7 +14,7 @@
 
 ### Features
 
-- 🗺️ Map running commands to nerdfont icons
+- 🗺️ Map commands to nerdfont icons
 - 🎨 Customization options for per command coloring and emojis
 - 🔄 Easy to override default mappings
 - ⚡ Fast (Instant lookup time `O(1)`)
