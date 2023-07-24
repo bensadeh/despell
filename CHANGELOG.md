@@ -2,7 +2,15 @@
 
 ## 1.1.0
 
+*Core*
+
 - Use `println` instead of `print` to avoid trailing `%` when running despell in the terminal
+
+*Dependencies*
+
+- Update `clap` from 4.3.12 to 4.3.19
+- Update `serde` from 1.0.171 to 1.0.175
+- Update `tempfile` from 3.6.0 to 3.7.0
 
 ## 1.0.0
 
