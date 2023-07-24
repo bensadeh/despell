@@ -15,10 +15,10 @@
 ### Features
 
 - 🗺️ Map commands to nerdfont icons
-- 🎨 Customization options for per command coloring and emojis
+- 🎨 Customization options for colors and emojis
 - 🔄 Easy to override default mappings
 - ⚡ Fast (Instant lookup time `O(1)`)
-- 🔧 Simple to use and integrate into other themes
+- 🔧 Simple to use and integrate with other themes
 
 ## Installing
 
