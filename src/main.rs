@@ -41,7 +41,7 @@ fn main() {
 
     let output = get_output(args.use_emoji, args.use_color, icon);
 
-    print!("{}", output);
+    println!("{}", output);
 }
 
 fn get_output(use_emoji: bool, use_color: bool, icon: Icon) -> String {

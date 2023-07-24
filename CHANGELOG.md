@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+
+- Use `println` instead of `print` to avoid trailing `%` when running despell in the terminal
+
 ## 1.0.0
 
 _16.07.23_
