@@ -1,57 +1,64 @@
-use crate::icon::Icon;
-use clap::Parser;
-
+mod cli;
 mod color;
 mod config;
 mod defaults;
 mod emojis;
 mod icon;
 mod nerdfonts;
+mod types;
 
-#[derive(Parser)]
-#[clap(version = env!("CARGO_PKG_VERSION"))]
-struct Args {
-    /// Command name
-    #[clap(name = "COMMAND")]
-    cmd_name: String,
+use crate::cli::Args;
+use crate::icon::Icon;
+use crate::types::{MappingSelection, OutputSelection};
 
-    /// Let despell override the color of the icon
-    #[clap(short = 'c', long = "color", conflicts_with = "use_emoji")]
-    use_color: bool,
+use color_eyre::eyre::Result;
 
-    /// Use emojis instead of nerdfonts
-    #[clap(short = 'e', long = "emoji", conflicts_with = "use_color")]
-    use_emoji: bool,
+fn main() -> Result<()> {
+    color_eyre::install()?;
 
-    /// Use custom mappings from ~/.config/despell/config.toml
-    #[clap(short = 'u', long = "custom")]
-    use_custom_mappings: bool,
-}
-
-fn main() {
-    let args: Args = Args::parse();
+    let args: Args = cli::parse_args();
     let cmd_name = &args.cmd_name;
     let config_path = "~/.config/despell/config.toml";
 
-    let icon = if args.use_custom_mappings {
-        config::parse_config_and_get_icon(config_path, cmd_name)
-    } else {
-        defaults::get_icon(cmd_name).unwrap_or_default()
+    let mapping_selection = determine_mapping(args.use_custom_mappings);
+    let output_selection = determine_output_selection(args.use_emoji, args.use_color);
+
+    let icon = match mapping_selection {
+        MappingSelection::Custom => config::parse_config_and_get_icon(config_path, cmd_name),
+        MappingSelection::Default => defaults::get_icon(cmd_name).unwrap_or_default(),
     };
 
-    let output = get_output(args.use_emoji, args.use_color, icon);
+    let output = get_output(output_selection, icon);
 
     println!("{}", output);
+
+    Ok(())
 }
 
-fn get_output(use_emoji: bool, use_color: bool, icon: Icon) -> String {
+fn determine_mapping(use_custom_mappings: bool) -> MappingSelection {
+    if use_custom_mappings {
+        return MappingSelection::Custom;
+    }
+
+    MappingSelection::Default
+}
+
+fn determine_output_selection(use_emoji: bool, use_color: bool) -> OutputSelection {
     if use_emoji {
-        return icon.emoji;
+        return OutputSelection::Emoji;
     }
 
     if use_color {
-        return format!("#[fg={}]{}", icon.color, icon.nerdfont);
+        return OutputSelection::Colored;
     }
 
-    icon.nerdfont
+    OutputSelection::Default
+}
+
+fn get_output(selection: OutputSelection, icon: Icon) -> String {
+    match selection {
+        OutputSelection::Emoji => icon.emoji,
+        OutputSelection::Colored => format!("#[fg={}]{}", icon.color, icon.nerdfont),
+        OutputSelection::Default => icon.nerdfont,
+    }
 }
