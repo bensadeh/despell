@@ -36,11 +36,10 @@ fn main() -> Result<()> {
 }
 
 fn determine_mapping(use_custom_mappings: bool) -> MappingSelection {
-    if use_custom_mappings {
-        return MappingSelection::Custom;
+    match use_custom_mappings {
+        true => MappingSelection::Custom,
+        false => MappingSelection::Default,
     }
-
-    MappingSelection::Default
 }
 
 fn determine_output_selection(use_emoji: bool, use_color: bool) -> OutputSelection {
