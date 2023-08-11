@@ -1,7 +1,7 @@
 use crate::color::Color;
 use crate::emojis;
-use crate::icon::Icon;
 use crate::nerdfonts;
+use crate::types::Icon;
 use phf::phf_map;
 
 static DEFAULT_MAPPINGS: phf::Map<&'static str, (&'static str, Color, &'static str)> = phf_map! {

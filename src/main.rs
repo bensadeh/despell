@@ -3,13 +3,11 @@ mod color;
 mod config;
 mod defaults;
 mod emojis;
-mod icon;
 mod nerdfonts;
 mod types;
 
 use crate::cli::Args;
-use crate::icon::Icon;
-use crate::types::{MappingSelection, OutputSelection};
+use crate::types::{Icon, MappingSelection, OutputSelection};
 
 use color_eyre::eyre::Result;
 
