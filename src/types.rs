@@ -44,12 +44,12 @@ fn default_emoji() -> String {
     emojis::TOP_HAT.to_string()
 }
 
-pub enum MappingSelection {
+pub enum MappingSource {
     Custom,
     Default,
 }
 
-pub enum OutputSelection {
+pub enum Format {
     Emoji,
     Colored,
     Default,
