@@ -1,4 +1,4 @@
-pub enum MappingSource {
+pub enum Source {
     Custom,
     Default,
 }

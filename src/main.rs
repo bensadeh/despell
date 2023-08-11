@@ -6,7 +6,7 @@ mod icon;
 mod types;
 
 use crate::cli::Args;
-use crate::types::{Format, MappingSource};
+use crate::types::{Format, Source};
 
 use color_eyre::eyre::Result;
 
@@ -17,12 +17,12 @@ fn main() -> Result<()> {
     let cmd_name = &args.cmd_name;
     let config_path = "~/.config/despell/config.toml";
 
-    let (mapping_selection, format) =
-        determine_mapping_and_format(args.use_custom_mappings, args.use_emoji, args.use_color);
+    let (source, format) =
+        get_source_and_format(args.use_custom_mappings, args.use_emoji, args.use_color);
 
-    let icon = match mapping_selection {
-        MappingSource::Custom => config::parse_config_and_get_icon(config_path, cmd_name),
-        MappingSource::Default => defaults::get_icon(cmd_name).unwrap_or_default(),
+    let icon = match source {
+        Source::Custom => config::parse_config_and_get_icon(config_path, cmd_name),
+        Source::Default => defaults::get_icon(cmd_name).unwrap_or_default(),
     };
 
     let output = match format {
@@ -36,14 +36,14 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn determine_mapping_and_format(
+fn get_source_and_format(
     use_custom_mappings: bool,
     use_emoji: bool,
     use_color: bool,
-) -> (MappingSource, Format) {
+) -> (Source, Format) {
     let mapping_source = match use_custom_mappings {
-        true => MappingSource::Custom,
-        false => MappingSource::Default,
+        true => Source::Custom,
+        false => Source::Default,
     };
 
     let format = if use_emoji {
