@@ -1,7 +1,8 @@
+pub use crate::icon::emojis;
+pub use crate::icon::nerdfonts;
+
 use crate::color::Color;
-use crate::emojis;
-use crate::nerdfonts;
-use crate::types::Icon;
+use crate::icon::Icon;
 use phf::phf_map;
 
 static DEFAULT_MAPPINGS: phf::Map<&'static str, (&'static str, Color, &'static str)> = phf_map! {

@@ -2,8 +2,7 @@ mod cli;
 mod color;
 mod config;
 mod defaults;
-mod emojis;
-mod nerdfonts;
+mod icon;
 mod types;
 
 use crate::cli::Args;

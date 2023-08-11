@@ -1,5 +1,5 @@
 use crate::defaults;
-use crate::types::Icon;
+use crate::icon::Icon;
 use serde::Deserialize;
 use std::collections::HashMap;
 use std::path::PathBuf;
