@@ -13,4 +13,4 @@ clap = { version = "4.4.2", features = ["derive"] }
 color-eyre = "0.6.2"
 phf = { version = "0.11.2", features = ["macros"] }
 serde = { version = "1.0", features = ["derive"] }
-toml = "0.7.6"
+toml = "0.7.8"
